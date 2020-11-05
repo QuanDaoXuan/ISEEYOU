@@ -40,26 +40,34 @@ app.post("/login", jsonParse, function (req, res) {
   });
   var sqlString = `SELECT * FROM Users WHERE user_name = '${req.body.username}' and password = '${req.body.password}'`;
   console.log(sqlString);
-  connect.connect(function (err) {
-    if (err) throw err;
-    connect.query(sqlString, function (error, rows) {
-      if (rows.length == 1) {
-        res.json(
-          {
-            message: "đăng nhập thành công !!",
-          },
-          200
-        );
-      } else {
-        res.json(
-          {
-            message: "sai thông tin đăng nhập !!",
-          },
-          403
-        );
-      }
-    });
-    connect.end();
+  // connect.connect(function (err) {
+  //   if (err) throw err;
+  //   connect.query(sqlString, function (error, rows) {
+  //     if (rows.length == 1) {
+  //       res.json(
+  //         {
+  //           message: "đăng nhập thành công !!",
+  //         },
+  //         200
+  //       );
+  //     } else {
+  //       res.json(
+  //         {
+  //           message: "sai thông tin đăng nhập !!",
+  //         },
+  //         403
+  //       );
+  //     }
+  //   });
+  //   connect.end();
+  // });
+  connect.connect(function(err) {
+    if (err) {
+      console.error('error connecting: ' + err.stack);
+      return;
+    }
+   
+    console.log('connected as id ' + connection.threadId);
   });
 });
 
