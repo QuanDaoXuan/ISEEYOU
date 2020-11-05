@@ -18,12 +18,18 @@ app.get("/api", function (req, res) {
   });
 });
 
-
+// CREATE USER 'me'@'localhost' IDENTIFIED BY 'Aa12345678@'
+// CREATE TABLE Users (
+//   id int,
+//   username varchar(255),
+//   password varchar(255)
+// );
 //info access database
+//login mysql -u root -p
 let localhost = "localhost";
-const user = "me";
-const password = "admin";
-const database = "test";
+const user = "root";
+const password = "Quanbmt123@";
+const database = "Users";
 
 app.post("/login", jsonParse, function (req, res) {
   var connect = mysql.createConnection({

@@ -16,11 +16,11 @@ enum HttpCode: Int {
 
 enum APIUrl: String {
     #if DEV
-    case url = "http:127.0.0.1:3000/"
+    case url = "http:18.188.116.218:3000/"
     #elseif STAG
-    case url = "http:127.0.0.1:3000/"
+    case url = "http:18.188.116.218:3000/"
     #else
-    case url = "http:127.0.0.1:3000/"
+    case url = "http:18.188.116.218:3000/"
     #endif
 }
 
