@@ -26,88 +26,87 @@ app.get("/api", function (req, res) {
 // );
 //info access database
 //login mysql -u root -p
-let localhost = "localhost";
+let localhost = "127.0.0.1";
 const user = "root";
 const password = "Quanbmt123@";
-const database = "Users";
+const database = "iseeyou";
 
 app.post("/login", jsonParse, function (req, res) {
-  var connect = mysql.createConnection({
+  var connection = mysql.createConnection({
     host: localhost,
     user: user,
     password: password,
     database: database,
   });
-  var sqlString = `SELECT * FROM Users WHERE user_name = '${req.body.username}' and password = '${req.body.password}'`;
+
+  var sqlString = `SELECT * FROM Users WHERE username = '${req.body.username}' and password = '${req.body.password}'`;
   console.log(sqlString);
-  // connect.connect(function (err) {
-  //   if (err) throw err;
-  //   connect.query(sqlString, function (error, rows) {
-  //     if (rows.length == 1) {
-  //       res.json(
-  //         {
-  //           message: "đăng nhập thành công !!",
-  //         },
-  //         200
-  //       );
-  //     } else {
-  //       res.json(
-  //         {
-  //           message: "sai thông tin đăng nhập !!",
-  //         },
-  //         403
-  //       );
-  //     }
-  //   });
-  //   connect.end();
-  // });
-  connect.connect(function(err) {
-    if (err) {
-      console.error('error connecting: ' + err.stack);
-      return;
-    }
-   
-    console.log('connected as id ' + connection.threadId);
+  connection.connect(function (err) {
+    if (err) throw err;
+    connection.query(sqlString, function (error, rows) {
+      if (error) {
+        console.log("error when query: ", error);
+      } else {
+        if (rows.length == 1) {
+          res.json(
+            {
+              message: "đăng nhập thành công !!",
+            },
+            200
+          );
+        } else {
+          res.status(400).send({
+            message: "Có lỗi xảy ra.",
+          });
+        }
+      }
+    });
+    connection.end();
   });
 });
 
-// app.post("/register", jsonParse, function (req, res) {
-//   var connect = mysql.createConnection({
-//     host: localhost,
-//     user: user,
-//     password: password,
-//     database: database,
-//   });
-//   var sqlString = `SELECT * FROM Users WHERE user_name = '${req.body.username}'`;
-//   console.log(sqlString);
-//   connect.connect(function (err) {
-//     if (err) throw err;
-//     connect.query(sqlString, function (error, rows) {
-//       if (rows.length === 0) {
-//         var sqlInsertString = `INSERT INTO Users (id, user_name,password) VALUES (1,'${req.body.username}', '${req.body.username}')`;
-//         console.log(sqlInsertString);
-//         connect.query(sqlInsertString, function (error, rows) {
-//           console.log(error);
-//           res.json(
-//             {
-//               message: "Đăng ký thành công!!",
-//             },
-//             200
-//           );
-//           connect.end();
-//         });
-//       } else {
-//         res.json(
-//           {
-//             message: "Đăng ký thất bại !!",
-//           },
-//           403
-//         );
-//         connect.end();
-//       }
-//     });
-//   });
-// });
+app.post("/register", jsonParse, function (req, res) {
+  var connection = mysql.createConnection({
+    host: localhost,
+    user: user,
+    password: password,
+    database: database,
+  });
+  var sqlString = `SELECT * FROM Users WHERE username = '${req.body.username}'`;
+  console.log(sqlString);
+  connection.connect(function (err) {
+    if (err) throw err;
+    connection.query(sqlString, function (error, rows) {
+      if (error) {
+        console.log(error);
+        res.status(400).send({
+          message: "Có lỗi xảy ra.",
+        });
+        connection.end();
+      } else {
+        if (rows.length === 0) {
+          var sqlInsertString = `INSERT INTO Users (id, username,password) VALUES (1,'${req.body.username}', '${req.body.username}')`;
+          console.log(sqlInsertString);
+          connection.query(sqlInsertString, function (error, rows) {
+            console.log(error);
+            res.json(
+              {
+                message: "Đăng ký thành công!!",
+              },
+              200
+            );
+            connection.end();
+          });
+        } else {
+          res.status(400).send({
+            message: "Có lỗi xảy ra, đăng ký thất bại. !!",
+          });
+          connection.end();
+        }
+      }
+    });
+  });
+});
 
 app.listen(port, function () {
   console.log("server is listening on port ", port);
