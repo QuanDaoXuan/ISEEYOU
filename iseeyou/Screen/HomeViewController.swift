@@ -1,20 +1,18 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  iseeyou
 //
-//  Created by resopt on 7/24/1399 AP.
+//  Created by resopt on 7/27/1399 AP.
 //  Copyright © 1399 truc. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = true
+
         // Do any additional setup after loading the view.
     }
-
-
 }
-
