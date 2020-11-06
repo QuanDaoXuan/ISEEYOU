@@ -55,9 +55,8 @@ app.post("/login", jsonParse, function (req, res) {
             200
           );
         } else {
-          res.status(400).send({
-            message: "Có lỗi xảy ra.",
-          });
+          res.status(400).send({ error: "Bad login" });
+          console.log("400 bad login");
         }
       }
     });
@@ -85,18 +84,30 @@ app.post("/register", jsonParse, function (req, res) {
         connection.end();
       } else {
         if (rows.length === 0) {
-          var sqlInsertString = `INSERT INTO Users (id, username,password) VALUES (1,'${req.body.username}', '${req.body.username}')`;
-          console.log(sqlInsertString);
-          connection.query(sqlInsertString, function (error, rows) {
-            console.log(error);
-            res.json(
-              {
-                message: "Đăng ký thành công!!",
-              },
-              200
-            );
-            connection.end();
-          });
+          if (req.body.username == "" || req.body.password == "") {
+            res.status(400).send({
+              message: "Vui lòng điền đầy đủ username và password",
+            });
+          } else {
+            var sqlInsertString = `INSERT INTO Users (username,password) VALUES ('${req.body.username}', '${req.body.password}')`;
+            console.log(sqlInsertString);
+            connection.query(sqlInsertString, function (error, rows) {
+              if (error) {
+                console.log(error);
+                res.status(400).send({
+                  message: "Không thể đăng ký user mới!!",
+                });
+              } else {
+                res.json(
+                  {
+                    message: "Đăng ký thành công!!",
+                  },
+                  200
+                );
+                connection.end();
+              }
+            });
+          }
         } else {
           res.status(400).send({
             message: "Có lỗi xảy ra, đăng ký thất bại. !!",
