@@ -37,6 +37,7 @@ class RegisterViewcontroller: UIViewController {
                 let indexPath = IndexPath(row: index, section: 0)
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.textFieldAndLabelCell, for: indexPath)!
                 cell.setupCell(title: "Nhập user name", placeHoder: "enter your user name")
+                cell.bindTextField(viewModel: self.viewModel, type: 1)
                 cell.layoutIfNeeded()
                 cell.selectionStyle = .none
                 return cell
@@ -44,6 +45,7 @@ class RegisterViewcontroller: UIViewController {
                 let indexPath = IndexPath(row: index, section: 0)
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.textFieldAndLabelCell, for: indexPath)!
                 cell.setupCell(title: "Nhập password", placeHoder: "enter your password")
+                cell.bindTextField(viewModel: self.viewModel, type: 2)
                 cell.layoutIfNeeded()
                 cell.selectionStyle = .none
                 return cell
@@ -51,6 +53,7 @@ class RegisterViewcontroller: UIViewController {
                 let indexPath = IndexPath(row: index, section: 0)
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.textFieldAndLabelCell, for: indexPath)!
                 cell.setupCell(title: "Nhập lại password", placeHoder: "enter your password again")
+                cell.bindTextField(viewModel: self.viewModel, type: 3)
                 cell.layoutIfNeeded()
                 cell.selectionStyle = .none
                 return cell
@@ -66,6 +69,11 @@ class RegisterViewcontroller: UIViewController {
                 cell.setupButton(title: "Register Now")
                 cell.layoutIfNeeded()
                 cell.selectionStyle = .none
+                cell.button.rx.tapGesture().when(.recognized).subscribe(onNext: {
+                    _ in
+                    self.viewModel.setupRegister(username: self.viewModel.usermame, password: self.viewModel.password, confirmPassword: self.viewModel.confirmPassword)
+                }).disposed(by: cell.disposeBag)
+
                 return cell
             default:
                 return UITableViewCell()

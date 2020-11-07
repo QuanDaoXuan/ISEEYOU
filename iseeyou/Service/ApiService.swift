@@ -1,6 +1,9 @@
 //
 //  ApiServices.swift
-
+//  JWI
+//
+//  Created by Hung Tran on 5/4/20.
+//  Copyright © 2020 hungtd. All rights reserved.
 //
 
 import Alamofire
@@ -30,8 +33,11 @@ class APIService {
     func callAPI(endpoint: String? = nil, path: String, method: HTTPMethod, params: Parameters?, encoding: ParameterEncoding = JSONEncoding.default, headers: HTTPHeaders? = nil) -> Observable<JSON> {
         return Observable.create { observer in
             if !APIService.checkNetworkAvailable() {
+                let error = NSError(domain: "error", code: 999, userInfo: nil)
+                print(error)
                 DialogHelper.shared.hideHUD()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    DialogHelper.shared.showPopup(title: "", msg: "internet error")
                     observer.onCompleted()
                 }
             } else {
@@ -41,25 +47,22 @@ class APIService {
                 } else {
                     apiUrl = APIUrl.url.rawValue + path
                 }
-                print(apiUrl)
                 print(params)
 
                 let request = self.session.request(apiUrl, method: method, parameters: params, encoding: encoding, headers: headers)
                 request.responseJSON { response in
                     let code = response.response?.statusCode ?? HttpCode.cancel.rawValue
 
-                    if !APIService.checkNetworkAvailable() {
-                        DialogHelper.shared.hideHUD()
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                            observer.onCompleted()
-                        }
-                    }
-
                     switch response.result {
                     case .success(let value):
                         let json = JSON(value)
                         if code == HttpCode.success.rawValue {
                             observer.onNext(json)
+                        } else {
+                            let dict = json.dictionaryValue
+                            let error = NSError(domain: "error", code: code, userInfo: dict)
+                            print(error)
+                            observer.onError(error)
                         }
                     case .failure(let error):
                         print(error)
@@ -78,6 +81,8 @@ class APIService {
 
 extension APIService {
     public static func returnHeaders() -> HTTPHeaders? {
+        // retrieve token from cache
+
         let headers: HTTPHeaders = [
             "Content-Type": "application/json",
             "Accept": "application/json"

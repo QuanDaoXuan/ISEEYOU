@@ -34,11 +34,14 @@ class TextFieldAndLabelCell: UITableViewCell {
         switch type {
         case 1:
             textField.rx.text.bind { value in
+                print(viewModel.usermame)
                 viewModel.usermame = value ?? ""
+                print(viewModel.usermame)
             }.disposed(by: disposeBag)
         case 2:
             textField.rx.text.bind { value in
                 viewModel.password = value ?? ""
+                print(viewModel.password)
             }.disposed(by: disposeBag)
         case 3:
             textField.rx.text.bind { value in
