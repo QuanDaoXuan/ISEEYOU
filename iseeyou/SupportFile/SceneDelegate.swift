@@ -16,10 +16,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         if SaveDataDefaults().getIsNeedLogin() {
             let vc = R.storyboard.main.loginscreen()!
-            window.rootViewController = vc
+            let navi = UINavigationController(rootViewController: vc)
+            window.rootViewController = navi
         } else {
             let vc = R.storyboard.main.tabbarcontrollerViewController()!
-            window.rootViewController = vc
+            let navi = UINavigationController(rootViewController: vc)
+            window.rootViewController = navi
         }
         self.window = window
         window.makeKeyAndVisible()

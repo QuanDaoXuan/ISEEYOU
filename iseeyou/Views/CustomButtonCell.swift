@@ -10,11 +10,19 @@ import RxSwift
 import UIKit
 
 class CustomButtonCell: UITableViewCell {
+    @IBOutlet var marginBottom: NSLayoutConstraint!
+    @IBOutlet var marginTop: NSLayoutConstraint!
     @IBOutlet var button: UIButton!
     var disposeBag = DisposeBag()
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        marginBottom.constant = 10
+        marginTop.constant = 0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

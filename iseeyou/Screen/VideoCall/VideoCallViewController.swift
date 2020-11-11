@@ -6,7 +6,6 @@
 //  Copyright © 2020 truc. All rights reserved.
 //
 
-
 import Starscream
 import UIKit
 import WebRTC
@@ -91,6 +90,12 @@ class VideoCallViewController: UIViewController, WebSocketDelegate, RTCClientDel
     
     override func viewDidAppear(_ animated: Bool) {
         setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+        print("true")
     }
     
     override func didReceiveMemoryWarning() {
@@ -382,9 +387,7 @@ extension VideoCallViewController {
     }
 }
 
-
 class ScreenSizeUtil {
-    
     static func width() -> CGFloat {
         return UIScreen.main.bounds.width
     }

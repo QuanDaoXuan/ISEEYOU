@@ -14,6 +14,14 @@ enum HttpCode: Int {
     case NetworkError = 504
 }
 
+class RamdomName {
+    let names = ["Ái Hồng", "Ái Khanh", "Ánh Hồng", "Ánh Nguyệt", "Hạ Phương", "Hạ Uyên", "Hải Ân"]
+
+    func getRandom() -> String {
+        return self.names[Int.random(in: 0 ... self.names.count - 1)]
+    }
+}
+
 enum APIUrl: String {
     #if DEV
     case url = "http:18.188.116.218:3000/"

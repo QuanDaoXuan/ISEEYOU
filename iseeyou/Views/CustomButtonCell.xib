@@ -29,7 +29,7 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5e8-wp-xhS" secondAttribute="bottom" constant="50" id="MA5-nH-F1r"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5e8-wp-xhS" secondAttribute="bottom" constant="10" id="MA5-nH-F1r"/>
                     <constraint firstAttribute="trailing" secondItem="5e8-wp-xhS" secondAttribute="trailing" constant="30" id="sXm-ET-IPX"/>
                     <constraint firstItem="5e8-wp-xhS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="tAp-RA-4cA"/>
                     <constraint firstItem="5e8-wp-xhS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="u2c-Od-KJg"/>
@@ -38,6 +38,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="button" destination="5e8-wp-xhS" id="fPu-c6-0Ft"/>
+                <outlet property="marginBottom" destination="MA5-nH-F1r" id="37j-Rd-djY"/>
+                <outlet property="marginTop" destination="u2c-Od-KJg" id="e4s-WK-pZd"/>
             </connections>
             <point key="canvasLocation" x="149.27536231884059" y="146.65178571428569"/>
         </tableViewCell>

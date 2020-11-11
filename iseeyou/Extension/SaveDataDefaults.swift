@@ -26,4 +26,6 @@ class SaveDataDefaults {
     func getToken() -> String {
         return defaults.string(forKey: "tokenId") ?? ""
     }
+    
+    
 }
