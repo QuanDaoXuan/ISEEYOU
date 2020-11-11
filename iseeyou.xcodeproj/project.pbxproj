@@ -39,7 +39,6 @@
 		08263CDB25385AFC003996D4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08263CDA25385AFC003996D4 /* LoginViewController.swift */; };
 		08263CDC25385AFC003996D4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08263CDA25385AFC003996D4 /* LoginViewController.swift */; };
 		08263CDD25385AFC003996D4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08263CDA25385AFC003996D4 /* LoginViewController.swift */; };
-		08263CE0253861BD003996D4 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08263CDF253861BC003996D4 /* R.generated.swift */; };
 		082C487E254FEBCC000E6BC7 /* VideoCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C487D254FEBCC000E6BC7 /* VideoCallViewController.swift */; };
 		082C4884254FECAC000E6BC7 /* RTCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C4883254FECAC000E6BC7 /* RTCClient.swift */; };
 		082C4886254FF888000E6BC7 /* RTCSimulatorVideoDecoderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C4885254FF888000E6BC7 /* RTCSimulatorVideoDecoderFactory.swift */; };
@@ -55,6 +54,24 @@
 		0876A35A253C948200D968E5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876A358253C948200D968E5 /* HomeViewController.swift */; };
 		0876A35B253C948200D968E5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876A358253C948200D968E5 /* HomeViewController.swift */; };
 		087F987113AD9188B8F2933C /* Pods_iseeyou_iseeyouUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01572196F1B7EADC0D9450D6 /* Pods_iseeyou_iseeyouUITests.framework */; };
+		08B4F1D1255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D0255BCDDE00339C0A /* SaveDataDefaults.swift */; };
+		08B4F1D2255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D0255BCDDE00339C0A /* SaveDataDefaults.swift */; };
+		08B4F1D3255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D0255BCDDE00339C0A /* SaveDataDefaults.swift */; };
+		08B4F1D5255BD8E700339C0A /* tabbarcontrollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D4255BD8E700339C0A /* tabbarcontrollerViewController.swift */; };
+		08B4F1D6255BD8E700339C0A /* tabbarcontrollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D4255BD8E700339C0A /* tabbarcontrollerViewController.swift */; };
+		08B4F1D7255BD8E700339C0A /* tabbarcontrollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D4255BD8E700339C0A /* tabbarcontrollerViewController.swift */; };
+		08B4F1D9255BDC2E00339C0A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D8255BDC2E00339C0A /* R.generated.swift */; };
+		08B4F1DA255BDC2E00339C0A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D8255BDC2E00339C0A /* R.generated.swift */; };
+		08B4F1DB255BDC2E00339C0A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D8255BDC2E00339C0A /* R.generated.swift */; };
+		08B4F1E3255BDDCC00339C0A /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1E1255BDDCC00339C0A /* LoginCell.swift */; };
+		08B4F1E4255BDDCC00339C0A /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1E1255BDDCC00339C0A /* LoginCell.swift */; };
+		08B4F1E5255BDDCC00339C0A /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1E1255BDDCC00339C0A /* LoginCell.swift */; };
+		08B4F1E6255BDDCC00339C0A /* LoginCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08B4F1E2255BDDCC00339C0A /* LoginCell.xib */; };
+		08B4F1E7255BDDCC00339C0A /* LoginCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08B4F1E2255BDDCC00339C0A /* LoginCell.xib */; };
+		08B4F1E8255BDDCC00339C0A /* LoginCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08B4F1E2255BDDCC00339C0A /* LoginCell.xib */; };
+		08B4F1EB255BE6C100339C0A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1EA255BE6C100339C0A /* LoginViewModel.swift */; };
+		08B4F1EC255BE6C100339C0A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1EA255BE6C100339C0A /* LoginViewModel.swift */; };
+		08B4F1ED255BE6C100339C0A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1EA255BE6C100339C0A /* LoginViewModel.swift */; };
 		08F89B6F254BEF400089782B /* DialogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F89B6E254BEF400089782B /* DialogHelper.swift */; };
 		08F89B70254BEF400089782B /* DialogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F89B6E254BEF400089782B /* DialogHelper.swift */; };
 		08F89B71254BEF400089782B /* DialogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F89B6E254BEF400089782B /* DialogHelper.swift */; };
@@ -119,7 +136,6 @@
 		08263CCC25385963003996D4 /* iseeyouUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iseeyouUITests.swift; sourceTree = "<group>"; };
 		08263CCE25385963003996D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08263CDA25385AFC003996D4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		08263CDF253861BC003996D4 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = iseeyou/SupportFile/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		082C487D254FEBCC000E6BC7 /* VideoCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallViewController.swift; sourceTree = "<group>"; };
 		082C4883254FECAC000E6BC7 /* RTCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCClient.swift; sourceTree = "<group>"; };
 		082C4885254FF888000E6BC7 /* RTCSimulatorVideoDecoderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCSimulatorVideoDecoderFactory.swift; sourceTree = "<group>"; };
@@ -132,6 +148,12 @@
 		084572D725525DBE008C5D4F /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
 		084572D925525E01008C5D4F /* package-lock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "package-lock.json"; sourceTree = "<group>"; };
 		0876A358253C948200D968E5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		08B4F1D0255BCDDE00339C0A /* SaveDataDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDataDefaults.swift; sourceTree = "<group>"; };
+		08B4F1D4255BD8E700339C0A /* tabbarcontrollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabbarcontrollerViewController.swift; sourceTree = "<group>"; };
+		08B4F1D8255BDC2E00339C0A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		08B4F1E1255BDDCC00339C0A /* LoginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
+		08B4F1E2255BDDCC00339C0A /* LoginCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginCell.xib; sourceTree = "<group>"; };
+		08B4F1EA255BE6C100339C0A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		08F89B6E254BEF400089782B /* DialogHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogHelper.swift; sourceTree = "<group>"; };
 		08F89B72254BF3170089782B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		08F89B77254BF3EE0089782B /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
@@ -191,6 +213,7 @@
 		080C5C7425457EBB00F4627B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				08B4F1E0255BDDB400339C0A /* LoginCell */,
 				080C5C862545846900F4627B /* TopRegisterCell */,
 				080C5C7525457EE600F4627B /* TextFieldAndLabelCell.swift */,
 				080C5C7625457EE600F4627B /* TextFieldAndLabelCell.xib */,
@@ -205,6 +228,7 @@
 			children = (
 				08263CAE25385962003996D4 /* RegisterViewcontroller.swift */,
 				080C5C7E2545802300F4627B /* RegisterViewModel.swift */,
+				08B4F1D4255BD8E700339C0A /* tabbarcontrollerViewController.swift */,
 			);
 			path = RegisterScreen;
 			sourceTree = "<group>";
@@ -254,7 +278,6 @@
 				082C4881254FEBF5000E6BC7 /* SupportFile */,
 				0876A356253C945200D968E5 /* Screen */,
 				08263CB025385962003996D4 /* Main.storyboard */,
-				08263CDA25385AFC003996D4 /* LoginViewController.swift */,
 			);
 			path = iseeyou;
 			sourceTree = "<group>";
@@ -290,8 +313,8 @@
 			children = (
 				08263CB825385963003996D4 /* Info.plist */,
 				08263CAA25385962003996D4 /* AppDelegate.swift */,
-				08263CDF253861BC003996D4 /* R.generated.swift */,
 				08263CAC25385962003996D4 /* SceneDelegate.swift */,
+				08B4F1D8255BDC2E00339C0A /* R.generated.swift */,
 				08263CB525385963003996D4 /* LaunchScreen.storyboard */,
 				08263CB325385963003996D4 /* Assets.xcassets */,
 			);
@@ -346,11 +369,30 @@
 		0876A356253C945200D968E5 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				08B4F1E9255BE6AF00339C0A /* LoginScreen */,
 				082C487C254FEBB0000E6BC7 /* VideoCall */,
 				080C5C7D2545800800F4627B /* RegisterScreen */,
 				0876A358253C948200D968E5 /* HomeViewController.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		08B4F1E0255BDDB400339C0A /* LoginCell */ = {
+			isa = PBXGroup;
+			children = (
+				08B4F1E1255BDDCC00339C0A /* LoginCell.swift */,
+				08B4F1E2255BDDCC00339C0A /* LoginCell.xib */,
+			);
+			path = LoginCell;
+			sourceTree = "<group>";
+		};
+		08B4F1E9255BE6AF00339C0A /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				08263CDA25385AFC003996D4 /* LoginViewController.swift */,
+				08B4F1EA255BE6C100339C0A /* LoginViewModel.swift */,
+			);
+			path = LoginScreen;
 			sourceTree = "<group>";
 		};
 		08F89B6D254BEF2F0089782B /* Extension */ = {
@@ -359,6 +401,7 @@
 				08F89B6E254BEF400089782B /* DialogHelper.swift */,
 				08F89B72254BF3170089782B /* Constant.swift */,
 				08F89B84254BF5E50089782B /* UIColorExtension.swift */,
+				08B4F1D0255BCDDE00339C0A /* SaveDataDefaults.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -503,6 +546,7 @@
 			files = (
 				08263CB725385963003996D4 /* LaunchScreen.storyboard in Resources */,
 				08263CB425385963003996D4 /* Assets.xcassets in Resources */,
+				08B4F1E6255BDDCC00339C0A /* LoginCell.xib in Resources */,
 				08263CB225385962003996D4 /* Main.storyboard in Resources */,
 				080C5C8C2545848600F4627B /* TopRegisterCell.xib in Resources */,
 				080C5C7A25457EE600F4627B /* TextFieldAndLabelCell.xib in Resources */,
@@ -517,6 +561,7 @@
 				080C5C8D2545848600F4627B /* TopRegisterCell.xib in Resources */,
 				080C5C952545864000F4627B /* CustomButtonCell.xib in Resources */,
 				080C5C7B25457EE600F4627B /* TextFieldAndLabelCell.xib in Resources */,
+				08B4F1E7255BDDCC00339C0A /* LoginCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +572,7 @@
 				080C5C8E2545848600F4627B /* TopRegisterCell.xib in Resources */,
 				080C5C962545864000F4627B /* CustomButtonCell.xib in Resources */,
 				080C5C7C25457EE600F4627B /* TextFieldAndLabelCell.xib in Resources */,
+				08B4F1E8255BDDCC00339C0A /* LoginCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,17 +709,21 @@
 				0876A359253C948200D968E5 /* HomeViewController.swift in Sources */,
 				08F89B73254BF3170089782B /* Constant.swift in Sources */,
 				080C5C7725457EE600F4627B /* TextFieldAndLabelCell.swift in Sources */,
+				08B4F1D5255BD8E700339C0A /* tabbarcontrollerViewController.swift in Sources */,
 				082C4888254FF89A000E6BC7 /* RTCSimluatorVideoEncoderFactory.swift in Sources */,
 				08F89B6F254BEF400089782B /* DialogHelper.swift in Sources */,
 				08263CDB25385AFC003996D4 /* LoginViewController.swift in Sources */,
 				082C4884254FECAC000E6BC7 /* RTCClient.swift in Sources */,
 				084572DA25525E01008C5D4F /* package-lock.json in Sources */,
 				080C5C892545848600F4627B /* TopRegisterCell.swift in Sources */,
+				08B4F1D9255BDC2E00339C0A /* R.generated.swift in Sources */,
+				08B4F1D1255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */,
 				08263CAF25385962003996D4 /* RegisterViewcontroller.swift in Sources */,
-				08263CE0253861BD003996D4 /* R.generated.swift in Sources */,
 				082C4886254FF888000E6BC7 /* RTCSimulatorVideoDecoderFactory.swift in Sources */,
 				082C489225501605000E6BC7 /* SignalingMessage.swift in Sources */,
 				082C488F2550147A000E6BC7 /* CameraSession.swift in Sources */,
+				08B4F1EB255BE6C100339C0A /* LoginViewModel.swift in Sources */,
+				08B4F1E3255BDDCC00339C0A /* LoginCell.swift in Sources */,
 				082C488D25501466000E6BC7 /* CameraFilter.swift in Sources */,
 				084572D825525DBE008C5D4F /* package.json in Sources */,
 				080C5C7F2545802300F4627B /* RegisterViewModel.swift in Sources */,
@@ -701,11 +751,16 @@
 				080C5C922545864000F4627B /* CustomButtonCell.swift in Sources */,
 				08F89B74254BF3170089782B /* Constant.swift in Sources */,
 				08F89B82254BF4920089782B /* AuthService.swift in Sources */,
+				08B4F1EC255BE6C100339C0A /* LoginViewModel.swift in Sources */,
 				0876A35A253C948200D968E5 /* HomeViewController.swift in Sources */,
 				080C5C802545802300F4627B /* RegisterViewModel.swift in Sources */,
+				08B4F1D2255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */,
+				08B4F1DA255BDC2E00339C0A /* R.generated.swift in Sources */,
 				080C5C8A2545848600F4627B /* TopRegisterCell.swift in Sources */,
+				08B4F1E4255BDDCC00339C0A /* LoginCell.swift in Sources */,
 				08F89B7E254BF46D0089782B /* AuthRepository.swift in Sources */,
 				08F89B79254BF3EE0089782B /* ApiService.swift in Sources */,
+				08B4F1D6255BD8E700339C0A /* tabbarcontrollerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,11 +776,16 @@
 				080C5C932545864000F4627B /* CustomButtonCell.swift in Sources */,
 				08F89B75254BF3170089782B /* Constant.swift in Sources */,
 				08F89B83254BF4920089782B /* AuthService.swift in Sources */,
+				08B4F1ED255BE6C100339C0A /* LoginViewModel.swift in Sources */,
 				0876A35B253C948200D968E5 /* HomeViewController.swift in Sources */,
 				080C5C812545802300F4627B /* RegisterViewModel.swift in Sources */,
+				08B4F1D3255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */,
+				08B4F1DB255BDC2E00339C0A /* R.generated.swift in Sources */,
 				080C5C8B2545848600F4627B /* TopRegisterCell.swift in Sources */,
+				08B4F1E5255BDDCC00339C0A /* LoginCell.swift in Sources */,
 				08F89B7F254BF46D0089782B /* AuthRepository.swift in Sources */,
 				08F89B7A254BF3EE0089782B /* ApiService.swift in Sources */,
+				08B4F1D7255BD8E700339C0A /* tabbarcontrollerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -885,14 +945,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CL9324PRQA;
+				DEVELOPMENT_TEAM = JH4AQFNHPZ;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = iseeyou/SupportFile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fsa.iseeyou;
+				PRODUCT_BUNDLE_IDENTIFIER = fsa.iseeyou11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -907,14 +967,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CL9324PRQA;
+				DEVELOPMENT_TEAM = JH4AQFNHPZ;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = iseeyou/SupportFile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fsa.iseeyou;
+				PRODUCT_BUNDLE_IDENTIFIER = fsa.iseeyou11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -929,6 +989,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JH4AQFNHPZ;
 				INFOPLIST_FILE = iseeyouTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -951,6 +1012,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JH4AQFNHPZ;
 				INFOPLIST_FILE = iseeyouTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -972,6 +1034,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JH4AQFNHPZ;
 				INFOPLIST_FILE = iseeyouUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -992,6 +1055,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JH4AQFNHPZ;
 				INFOPLIST_FILE = iseeyouUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
