@@ -85,6 +85,7 @@ app.post("/register", jsonParse, function (req, res) {
       } else {
         if (rows.length === 0) {
           if (req.body.username == "" || req.body.password == "") {
+            console.log("code 400");
             res.status(400).send({
               message: "Vui lòng điền đầy đủ username và password",
             });

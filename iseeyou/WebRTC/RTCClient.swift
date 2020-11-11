@@ -480,7 +480,7 @@ extension RTCClient{
     }
     
     func peerConnection(_ peerConnection: RTCPeerConnection, didGenerate candidate: RTCIceCandidate) {
-          self.delegate?.didGenerateCandidate(iceCandidate: candidate)
+//          self.delegate?.didGenerateCandidate(iceCandidate: candidate)
     }
     
     func peerConnection(_ peerConnection: RTCPeerConnection, didRemove candidates: [RTCIceCandidate]) {

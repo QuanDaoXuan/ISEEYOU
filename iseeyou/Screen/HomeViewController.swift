@@ -6,13 +6,17 @@
 //  Copyright © 1399 truc. All rights reserved.
 //
 
+import Rswift
+import RxCocoa
+import RxSwift
 import UIKit
-
 class HomeViewController: UIViewController {
+    @IBOutlet var favoriteItem: UITabBarItem!
+    @IBOutlet var tabbar: UITabBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
-
-        // Do any additional setup after loading the view.
+        
     }
 }
