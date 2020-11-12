@@ -23,8 +23,13 @@ class ListUsersViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.listUserCell, for: indexPath)!
-        cell.isUserInteractionEnabled = false
+//        cell.isUserInteractionEnabled = false
         cell.titleLb.text = RamdomName().getRandom()
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = R.storyboard.prepare.prepareForCallViewController()!
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

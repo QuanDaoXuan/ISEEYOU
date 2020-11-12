@@ -12,7 +12,7 @@ var mysql = require("mysql");
 
 app.set("view engine", "ejs");
 
-app.get("/api", function (req, res) {
+app.get("/auth_me", function (req, res) {
   res.json({
     quan: 123,
   });
@@ -48,6 +48,7 @@ app.post("/login", jsonParse, function (req, res) {
         console.log("error when query: ", error);
       } else {
         if (rows.length == 1) {
+          console.log(rows);
           res.json(
             {
               message: "đăng nhập thành công !!",

@@ -49,6 +49,23 @@
 		082C489225501605000E6BC7 /* SignalingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C489125501605000E6BC7 /* SignalingMessage.swift */; };
 		0836C461255CD42000C67DFC /* ShowDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C460255CD42000C67DFC /* ShowDialog.swift */; };
 		0836C463255CE4FF00C67DFC /* CHATViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C462255CE4FF00C67DFC /* CHATViewController.swift */; };
+		0836C466255CE8D100C67DFC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C465255CE8D100C67DFC /* ProfileViewController.swift */; };
+		0836C46A255CE95800C67DFC /* TopProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C468255CE95800C67DFC /* TopProfileCell.swift */; };
+		0836C46B255CE95800C67DFC /* TopProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0836C469255CE95800C67DFC /* TopProfileCell.xib */; };
+		0836C46E255CEF2B00C67DFC /* LabelWithArrowCel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C46C255CEF2B00C67DFC /* LabelWithArrowCel.swift */; };
+		0836C46F255CEF2B00C67DFC /* LabelWithArrowCel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0836C46D255CEF2B00C67DFC /* LabelWithArrowCel.xib */; };
+		0836C472255CF4A200C67DFC /* PrepareForCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C471255CF4A200C67DFC /* PrepareForCallViewController.swift */; };
+		0836C474255CF4BA00C67DFC /* PrepareForCallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C473255CF4BA00C67DFC /* PrepareForCallModel.swift */; };
+		0836C47B255CF57600C67DFC /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C47A255CF57600C67DFC /* ProfileViewModel.swift */; };
+		0836C47D255CF5AE00C67DFC /* prepare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836C47C255CF5AE00C67DFC /* prepare.storyboard */; };
+		0836C47E255CF5AE00C67DFC /* prepare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836C47C255CF5AE00C67DFC /* prepare.storyboard */; };
+		0836C47F255CF5AE00C67DFC /* prepare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836C47C255CF5AE00C67DFC /* prepare.storyboard */; };
+		0836C482255CF61900C67DFC /* CustomButtonCallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C480255CF61900C67DFC /* CustomButtonCallCell.swift */; };
+		0836C483255CF61900C67DFC /* CustomButtonCallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C480255CF61900C67DFC /* CustomButtonCallCell.swift */; };
+		0836C484255CF61900C67DFC /* CustomButtonCallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C480255CF61900C67DFC /* CustomButtonCallCell.swift */; };
+		0836C485255CF61900C67DFC /* CustomButtonCallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0836C481255CF61900C67DFC /* CustomButtonCallCell.xib */; };
+		0836C486255CF61900C67DFC /* CustomButtonCallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0836C481255CF61900C67DFC /* CustomButtonCallCell.xib */; };
+		0836C487255CF61900C67DFC /* CustomButtonCallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0836C481255CF61900C67DFC /* CustomButtonCallCell.xib */; };
 		08393CDC255C423F006B2FF3 /* ListUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08393CDB255C423F006B2FF3 /* ListUsersViewController.swift */; };
 		08393CDD255C423F006B2FF3 /* ListUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08393CDB255C423F006B2FF3 /* ListUsersViewController.swift */; };
 		08393CDE255C423F006B2FF3 /* ListUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08393CDB255C423F006B2FF3 /* ListUsersViewController.swift */; };
@@ -157,6 +174,17 @@
 		082C489125501605000E6BC7 /* SignalingMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingMessage.swift; sourceTree = "<group>"; };
 		0836C460255CD42000C67DFC /* ShowDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDialog.swift; sourceTree = "<group>"; };
 		0836C462255CE4FF00C67DFC /* CHATViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHATViewController.swift; sourceTree = "<group>"; };
+		0836C465255CE8D100C67DFC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0836C468255CE95800C67DFC /* TopProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopProfileCell.swift; sourceTree = "<group>"; };
+		0836C469255CE95800C67DFC /* TopProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopProfileCell.xib; sourceTree = "<group>"; };
+		0836C46C255CEF2B00C67DFC /* LabelWithArrowCel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithArrowCel.swift; sourceTree = "<group>"; };
+		0836C46D255CEF2B00C67DFC /* LabelWithArrowCel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelWithArrowCel.xib; sourceTree = "<group>"; };
+		0836C471255CF4A200C67DFC /* PrepareForCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareForCallViewController.swift; sourceTree = "<group>"; };
+		0836C473255CF4BA00C67DFC /* PrepareForCallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareForCallModel.swift; sourceTree = "<group>"; };
+		0836C47A255CF57600C67DFC /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		0836C47C255CF5AE00C67DFC /* prepare.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = prepare.storyboard; sourceTree = "<group>"; };
+		0836C480255CF61900C67DFC /* CustomButtonCallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonCallCell.swift; sourceTree = "<group>"; };
+		0836C481255CF61900C67DFC /* CustomButtonCallCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButtonCallCell.xib; sourceTree = "<group>"; };
 		08393CDB255C423F006B2FF3 /* ListUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsersViewController.swift; sourceTree = "<group>"; };
 		08393CDF255C4252006B2FF3 /* listUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = listUser.storyboard; sourceTree = "<group>"; };
 		08393CE3255C429A006B2FF3 /* ListUsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsersModel.swift; sourceTree = "<group>"; };
@@ -365,6 +393,47 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		0836C464255CE65400C67DFC /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0836C467255CE93400C67DFC /* Cell */,
+				0836C465255CE8D100C67DFC /* ProfileViewController.swift */,
+				0836C47A255CF57600C67DFC /* ProfileViewModel.swift */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		0836C467255CE93400C67DFC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0836C468255CE95800C67DFC /* TopProfileCell.swift */,
+				0836C469255CE95800C67DFC /* TopProfileCell.xib */,
+				0836C46C255CEF2B00C67DFC /* LabelWithArrowCel.swift */,
+				0836C46D255CEF2B00C67DFC /* LabelWithArrowCel.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0836C470255CF45100C67DFC /* PrepareForCallViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0836C475255CF50100C67DFC /* Cell */,
+				0836C471255CF4A200C67DFC /* PrepareForCallViewController.swift */,
+				0836C473255CF4BA00C67DFC /* PrepareForCallModel.swift */,
+				0836C47C255CF5AE00C67DFC /* prepare.storyboard */,
+			);
+			path = PrepareForCallViewController;
+			sourceTree = "<group>";
+		};
+		0836C475255CF50100C67DFC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0836C480255CF61900C67DFC /* CustomButtonCallCell.swift */,
+				0836C481255CF61900C67DFC /* CustomButtonCallCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		08393CDA255C41D3006B2FF3 /* ListUser */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +473,8 @@
 		0876A356253C945200D968E5 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				0836C470255CF45100C67DFC /* PrepareForCallViewController */,
+				0836C464255CE65400C67DFC /* ProfileViewController */,
 				08393CDA255C41D3006B2FF3 /* ListUser */,
 				08B4F1E9255BE6AF00339C0A /* LoginScreen */,
 				082C487C254FEBB0000E6BC7 /* VideoCall */,
@@ -573,14 +644,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0836C485255CF61900C67DFC /* CustomButtonCallCell.xib in Resources */,
 				08263CB725385963003996D4 /* LaunchScreen.storyboard in Resources */,
 				08263CB425385963003996D4 /* Assets.xcassets in Resources */,
 				08263CB225385962003996D4 /* Main.storyboard in Resources */,
+				0836C46B255CE95800C67DFC /* TopProfileCell.xib in Resources */,
+				0836C47D255CF5AE00C67DFC /* prepare.storyboard in Resources */,
 				08393CED255C4412006B2FF3 /* ListUserCell.xib in Resources */,
 				080C5C8C2545848600F4627B /* TopRegisterCell.xib in Resources */,
 				08393CE0255C4253006B2FF3 /* listUser.storyboard in Resources */,
 				080C5C7A25457EE600F4627B /* TextFieldAndLabelCell.xib in Resources */,
 				080C5C942545864000F4627B /* CustomButtonCell.xib in Resources */,
+				0836C46F255CEF2B00C67DFC /* LabelWithArrowCel.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,9 +665,11 @@
 			files = (
 				08393CE1255C4253006B2FF3 /* listUser.storyboard in Resources */,
 				080C5C8D2545848600F4627B /* TopRegisterCell.xib in Resources */,
+				0836C486255CF61900C67DFC /* CustomButtonCallCell.xib in Resources */,
 				080C5C952545864000F4627B /* CustomButtonCell.xib in Resources */,
 				080C5C7B25457EE600F4627B /* TextFieldAndLabelCell.xib in Resources */,
 				08393CEE255C4412006B2FF3 /* ListUserCell.xib in Resources */,
+				0836C47E255CF5AE00C67DFC /* prepare.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,9 +679,11 @@
 			files = (
 				08393CE2255C4253006B2FF3 /* listUser.storyboard in Resources */,
 				080C5C8E2545848600F4627B /* TopRegisterCell.xib in Resources */,
+				0836C487255CF61900C67DFC /* CustomButtonCallCell.xib in Resources */,
 				080C5C962545864000F4627B /* CustomButtonCell.xib in Resources */,
 				080C5C7C25457EE600F4627B /* TextFieldAndLabelCell.xib in Resources */,
 				08393CEF255C4412006B2FF3 /* ListUserCell.xib in Resources */,
+				0836C47F255CF5AE00C67DFC /* prepare.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,10 +822,13 @@
 				080C5C7725457EE600F4627B /* TextFieldAndLabelCell.swift in Sources */,
 				08B4F1D5255BD8E700339C0A /* tabbarcontrollerViewController.swift in Sources */,
 				08393CDC255C423F006B2FF3 /* ListUsersViewController.swift in Sources */,
+				0836C47B255CF57600C67DFC /* ProfileViewModel.swift in Sources */,
+				0836C466255CE8D100C67DFC /* ProfileViewController.swift in Sources */,
 				082C4888254FF89A000E6BC7 /* RTCSimluatorVideoEncoderFactory.swift in Sources */,
 				08F89B6F254BEF400089782B /* DialogHelper.swift in Sources */,
 				08263CDB25385AFC003996D4 /* LoginViewController.swift in Sources */,
 				082C4884254FECAC000E6BC7 /* RTCClient.swift in Sources */,
+				0836C46E255CEF2B00C67DFC /* LabelWithArrowCel.swift in Sources */,
 				084572DA25525E01008C5D4F /* package-lock.json in Sources */,
 				0836C463255CE4FF00C67DFC /* CHATViewController.swift in Sources */,
 				080C5C892545848600F4627B /* TopRegisterCell.swift in Sources */,
@@ -762,12 +844,16 @@
 				082C488D25501466000E6BC7 /* CameraFilter.swift in Sources */,
 				084572D825525DBE008C5D4F /* package.json in Sources */,
 				080C5C7F2545802300F4627B /* RegisterViewModel.swift in Sources */,
+				0836C46A255CE95800C67DFC /* TopProfileCell.swift in Sources */,
 				080C5C912545864000F4627B /* CustomButtonCell.swift in Sources */,
 				08F89B78254BF3EE0089782B /* ApiService.swift in Sources */,
 				08F89B85254BF5E50089782B /* UIColorExtension.swift in Sources */,
+				0836C474255CF4BA00C67DFC /* PrepareForCallModel.swift in Sources */,
 				08F89B7D254BF46D0089782B /* AuthRepository.swift in Sources */,
 				082C487E254FEBCC000E6BC7 /* VideoCallViewController.swift in Sources */,
 				08F89B81254BF4920089782B /* AuthService.swift in Sources */,
+				0836C482255CF61900C67DFC /* CustomButtonCallCell.swift in Sources */,
+				0836C472255CF4A200C67DFC /* PrepareForCallViewController.swift in Sources */,
 				08393CEA255C4412006B2FF3 /* ListUserCell.swift in Sources */,
 				08263CAB25385962003996D4 /* AppDelegate.swift in Sources */,
 				084572D625525DA1008C5D4F /* server.js in Sources */,
@@ -794,6 +880,7 @@
 				0876A35A253C948200D968E5 /* HomeViewController.swift in Sources */,
 				080C5C802545802300F4627B /* RegisterViewModel.swift in Sources */,
 				08B4F1D2255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */,
+				0836C483255CF61900C67DFC /* CustomButtonCallCell.swift in Sources */,
 				08B4F1DA255BDC2E00339C0A /* R.generated.swift in Sources */,
 				080C5C8A2545848600F4627B /* TopRegisterCell.swift in Sources */,
 				08F89B7E254BF46D0089782B /* AuthRepository.swift in Sources */,
@@ -821,6 +908,7 @@
 				0876A35B253C948200D968E5 /* HomeViewController.swift in Sources */,
 				080C5C812545802300F4627B /* RegisterViewModel.swift in Sources */,
 				08B4F1D3255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */,
+				0836C484255CF61900C67DFC /* CustomButtonCallCell.swift in Sources */,
 				08B4F1DB255BDC2E00339C0A /* R.generated.swift in Sources */,
 				080C5C8B2545848600F4627B /* TopRegisterCell.swift in Sources */,
 				08F89B7F254BF46D0089782B /* AuthRepository.swift in Sources */,

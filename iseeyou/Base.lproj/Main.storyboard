@@ -55,14 +55,29 @@
         <!--Profile-->
         <scene sceneID="4yp-pg-wmq">
             <objects>
-                <viewController id="wbZ-Q3-Dqp" sceneMemberID="viewController">
+                <viewController id="wbZ-Q3-Dqp" customClass="ProfileViewController" customModule="iseeyou" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Amo-fa-7BQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NDX-y9-sOy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NDX-y9-sOy" firstAttribute="leading" secondItem="CyD-kE-YNM" secondAttribute="leading" id="30R-S4-66E"/>
+                            <constraint firstItem="CyD-kE-YNM" firstAttribute="trailing" secondItem="NDX-y9-sOy" secondAttribute="trailing" id="b96-fi-HND"/>
+                            <constraint firstItem="NDX-y9-sOy" firstAttribute="top" secondItem="CyD-kE-YNM" secondAttribute="top" id="eIH-Xx-NS2"/>
+                            <constraint firstItem="CyD-kE-YNM" firstAttribute="bottom" secondItem="NDX-y9-sOy" secondAttribute="bottom" id="qCz-jG-0C2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CyD-kE-YNM"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="vMg-Pf-0R2"/>
+                    <connections>
+                        <outlet property="tableView" destination="NDX-y9-sOy" id="ehZ-W5-kvQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3oe-aC-og7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

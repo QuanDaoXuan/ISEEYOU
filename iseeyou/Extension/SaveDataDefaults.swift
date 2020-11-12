@@ -11,8 +11,8 @@ import UIKit
 class SaveDataDefaults {
     let defaults = UserDefaults.standard
 
-    func setgetIsLogin(isNeedLogin: Bool) {
-        defaults.set(isNeedLogin, forKey: "IsLogin")
+    func setgetIsLogin(IsLogin: Bool) {
+        defaults.set(IsLogin, forKey: "IsLogin")
     }
 
     func getIsLogin() -> Bool {
@@ -26,6 +26,4 @@ class SaveDataDefaults {
     func getToken() -> String {
         return defaults.string(forKey: "tokenId") ?? ""
     }
-    
-    
 }

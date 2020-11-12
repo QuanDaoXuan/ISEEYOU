@@ -88,10 +88,6 @@ class LoginViewController: UIViewController {
         }.disposed(by: disposbag)
     }
 
-    func setInitScreen() {
-        navigationController?.navigationBar.isHidden = true
-        navigationController?.isToolbarHidden = true
-    }
 
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true

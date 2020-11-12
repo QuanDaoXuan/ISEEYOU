@@ -25,7 +25,7 @@ class LoginViewModel {
         } else {
             self.loginReposytory.login(username: self.usermame, password: self.password).subscribe(onNext: {
                 _ in
-                SaveDataDefaults().setgetIsLogin(isNeedLogin: true)
+                SaveDataDefaults().setgetIsLogin(IsLogin: true)
                 let vc = R.storyboard.main.tabbarcontrollerViewController()!
                 viewController.navigationController?.pushViewController(vc, animated: true)
                 viewController.removeFromParent()

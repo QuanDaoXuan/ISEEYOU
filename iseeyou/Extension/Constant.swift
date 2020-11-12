@@ -24,7 +24,7 @@ class RamdomName {
 
 enum APIUrl: String {
     #if DEV
-    case url = "http:18.188.116.218:3000/"
+    case url = "http:connect-thedots.xyz:3000/"
     #elseif STAG
     case url = "http:18.188.116.218:3000/"
     #else
