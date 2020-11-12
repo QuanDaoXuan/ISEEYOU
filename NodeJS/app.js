@@ -156,15 +156,13 @@ app.post("/auth_me", jsonParse, function (req, res) {
   });
 });
 
-app.post("/get_list_users", jsonParse, function (req, res) {
-  console.log("req.body.idUsers");
+app.get("/get_list_users", jsonParse, function (req, res) {
   var connection = mysql.createConnection({
     host: localhost,
     user: user,
     password: password,
     database: database,
   });
-  console.log("req.body.idUsers", req.body.idUsers);
   var sqlString = `SELECT * FROM Users`;
   console.log(sqlString);
   connection.connect(function (err) {

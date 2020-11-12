@@ -7,4 +7,15 @@
 //
 
 import Foundation
-class PrepareForCallModel {}
+import RxCocoa
+import RxSwift
+class PrepareForCallModel {
+    var user: User!
+
+    var datasource = BehaviorRelay<[Int]>(value: [0, 1])
+    var disposbag = DisposeBag()
+
+    init(user: User) {
+        self.user = user
+    }
+}

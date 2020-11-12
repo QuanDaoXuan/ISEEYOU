@@ -15,9 +15,15 @@ enum AuthService {
     case login(username: String, password: String)
     case register(username: String, password: String, confirmPassword: String)
     case auth_me
+    case get_list_users
     public func request() -> Observable<JSON> {
         var method: HTTPMethod {
-            return .post
+            switch self {
+            case .get_list_users:
+                return .post
+            default:
+                return .post
+            }
         }
 
         let params: Parameters? = {
@@ -38,6 +44,9 @@ enum AuthService {
                 param["idUsers"] = SaveDataDefaults().getToken()
 
                 return param
+            case .get_list_users:
+
+                return nil
             }
 
         }()
@@ -50,6 +59,8 @@ enum AuthService {
                 return "register/"
             case .auth_me:
                 return "auth_me/"
+            case .get_list_users:
+                return "get_list_users/"
             }
 
         }()

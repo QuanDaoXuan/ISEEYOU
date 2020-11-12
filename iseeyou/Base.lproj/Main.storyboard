@@ -10,7 +10,7 @@
         <!--Chat-->
         <scene sceneID="dE8-Jo-9rD">
             <objects>
-                <viewController id="Qh7-I9-Ykl" customClass="Ï" sceneMemberID="viewController">
+                <viewController id="Qh7-I9-Ykl" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LU0-Io-nOg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,6 +47,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="People" image="person.2.fill" catalog="system" id="Wq1-hc-wzM"/>
+                    <connections>
+                        <outlet property="tableView" destination="ySK-4J-q1D" id="bLr-4M-zlp"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hgp-w8-qMd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

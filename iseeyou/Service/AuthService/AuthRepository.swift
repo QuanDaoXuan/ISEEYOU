@@ -15,9 +15,14 @@ protocol AuthProtocol {
     func login(username: String, password: String) -> Observable<JSON>
     func register(username: String, password: String, confirmPassword: String) -> Observable<JSON>
     func auth_me() -> Observable<JSON>
+    func get_list_users() -> Observable<JSON>
 }
 
 struct AuthRepository: AuthProtocol {
+    func get_list_users() -> Observable<JSON> {
+        return AuthService.get_list_users.request()
+    }
+
     func auth_me() -> Observable<JSON> {
         return AuthService.auth_me.request()
     }

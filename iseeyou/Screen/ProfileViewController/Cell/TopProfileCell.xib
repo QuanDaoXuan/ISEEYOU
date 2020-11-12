@@ -127,8 +127,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="addressLb" destination="Hij-WK-dXI" id="Llv-kJ-7af"/>
                 <outlet property="coverImageHeight" destination="18j-RN-hCW" id="gGP-79-MNf"/>
                 <outlet property="coverImageView" destination="IT6-V3-chO" id="6bN-rv-qvc"/>
+                <outlet property="idLb" destination="pXv-ic-zIN" id="Wi5-Zq-tGL"/>
                 <outlet property="nameLb" destination="QUH-Dd-O8k" id="3K5-C1-LnZ"/>
                 <outlet property="profileImageView" destination="1cK-bt-3To" id="vRS-le-zg9"/>
             </connections>

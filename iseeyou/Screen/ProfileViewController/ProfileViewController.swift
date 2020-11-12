@@ -21,6 +21,7 @@ class ProfileViewController: UIViewController {
 
         setupTableView()
         setInitScreen()
+        viewModel.authMe(viewController: self)
     }
 
     func setupTableView() {
@@ -67,7 +68,5 @@ class ProfileViewController: UIViewController {
         title = "Your title"
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        viewModel.authMe(viewController: self)
-    }
+    override func viewWillAppear(_ animated: Bool) {}
 }

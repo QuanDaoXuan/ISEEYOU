@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         } else {
             let vc = R.storyboard.main.tabbarcontrollerViewController()!
             let navi = UINavigationController(rootViewController: vc)
+            navi.title = "123"
             window.rootViewController = navi
         }
         self.window = window

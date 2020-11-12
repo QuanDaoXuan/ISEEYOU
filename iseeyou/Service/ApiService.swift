@@ -14,7 +14,6 @@ import SwiftyJSON
 
 var countLogout: Int = 0
 class APIService {
-
     static let shareManager = APIService()
     let bag = DisposeBag()
     var countShowMessage: Int = 0
@@ -49,6 +48,7 @@ class APIService {
                     apiUrl = APIUrl.url.rawValue + path
                 }
                 print(params)
+                print("url: ", apiUrl, "method: ", method)
 
                 let request = self.session.request(apiUrl, method: method, parameters: params, encoding: encoding, headers: headers)
                 request.responseJSON { response in
