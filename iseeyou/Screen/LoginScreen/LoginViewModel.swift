@@ -19,21 +19,17 @@ class LoginViewModel {
     var loginReposytory = AuthRepository()
 
     func setupLogin(viewController: UIViewController) {
+        viewController.LoadingStart()
         if self.usermame == "" || self.password == "" {
             DialogHelper.shared.showPopup(title: "Cảnh Báo", msg: "username và password không được để trống.")
         } else {
             self.loginReposytory.login(username: self.usermame, password: self.password).subscribe(onNext: {
                 _ in
-                SaveDataDefaults().setIsNeedLogin(isNeedLogin: false)
-                print("SaveDataDefaults().getIsNeedLogin()",SaveDataDefaults().getIsNeedLogin())
+                SaveDataDefaults().setgetIsLogin(isNeedLogin: true)
                 let vc = R.storyboard.main.tabbarcontrollerViewController()!
                 viewController.navigationController?.pushViewController(vc, animated: true)
                 viewController.removeFromParent()
-
-//
-//                viewController.remove(at: viewControllers.count - 1)
-//                self.navigationController?.setViewControllers(viewControllers, animated: true)
-//                self.performSegue(withIdentifier: "destinationVC", sender: self)
+                viewController.LoadingStop()
             }, onError: {
                 _ in
                 DialogHelper.shared.showPopup(title: "", msg: "Có lỗi xảy ra khi đăng nhập, vui lòng kiểm tra lại.")
@@ -42,7 +38,7 @@ class LoginViewModel {
     }
 
     func setupRegister(viewController: UIViewController) {
-        let vc = R.storyboard.main.registerViewcontroller()!
-        viewController.navigationController?.pushViewController(vc, animated: true)
+//        let vc = R.storyboard.main.registerViewcontroller()!
+//        viewController.navigationController?.pushViewController(vc, animated: true)
     }
 }

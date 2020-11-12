@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        if SaveDataDefaults().getIsNeedLogin() {
+        if !SaveDataDefaults().getIsLogin() {
             let vc = R.storyboard.main.loginscreen()!
             let navi = UINavigationController(rootViewController: vc)
             window.rootViewController = navi

@@ -14,6 +14,7 @@ import SwiftyJSON
 
 var countLogout: Int = 0
 class APIService {
+
     static let shareManager = APIService()
     let bag = DisposeBag()
     var countShowMessage: Int = 0

@@ -47,6 +47,8 @@
 		082C488D25501466000E6BC7 /* CameraFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C488C25501466000E6BC7 /* CameraFilter.swift */; };
 		082C488F2550147A000E6BC7 /* CameraSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C488E2550147A000E6BC7 /* CameraSession.swift */; };
 		082C489225501605000E6BC7 /* SignalingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C489125501605000E6BC7 /* SignalingMessage.swift */; };
+		0836C461255CD42000C67DFC /* ShowDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C460255CD42000C67DFC /* ShowDialog.swift */; };
+		0836C463255CE4FF00C67DFC /* CHATViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C462255CE4FF00C67DFC /* CHATViewController.swift */; };
 		08393CDC255C423F006B2FF3 /* ListUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08393CDB255C423F006B2FF3 /* ListUsersViewController.swift */; };
 		08393CDD255C423F006B2FF3 /* ListUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08393CDB255C423F006B2FF3 /* ListUsersViewController.swift */; };
 		08393CDE255C423F006B2FF3 /* ListUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08393CDB255C423F006B2FF3 /* ListUsersViewController.swift */; };
@@ -78,12 +80,6 @@
 		08B4F1D9255BDC2E00339C0A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D8255BDC2E00339C0A /* R.generated.swift */; };
 		08B4F1DA255BDC2E00339C0A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D8255BDC2E00339C0A /* R.generated.swift */; };
 		08B4F1DB255BDC2E00339C0A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D8255BDC2E00339C0A /* R.generated.swift */; };
-		08B4F1E3255BDDCC00339C0A /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1E1255BDDCC00339C0A /* LoginCell.swift */; };
-		08B4F1E4255BDDCC00339C0A /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1E1255BDDCC00339C0A /* LoginCell.swift */; };
-		08B4F1E5255BDDCC00339C0A /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1E1255BDDCC00339C0A /* LoginCell.swift */; };
-		08B4F1E6255BDDCC00339C0A /* LoginCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08B4F1E2255BDDCC00339C0A /* LoginCell.xib */; };
-		08B4F1E7255BDDCC00339C0A /* LoginCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08B4F1E2255BDDCC00339C0A /* LoginCell.xib */; };
-		08B4F1E8255BDDCC00339C0A /* LoginCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08B4F1E2255BDDCC00339C0A /* LoginCell.xib */; };
 		08B4F1EB255BE6C100339C0A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1EA255BE6C100339C0A /* LoginViewModel.swift */; };
 		08B4F1EC255BE6C100339C0A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1EA255BE6C100339C0A /* LoginViewModel.swift */; };
 		08B4F1ED255BE6C100339C0A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1EA255BE6C100339C0A /* LoginViewModel.swift */; };
@@ -159,6 +155,8 @@
 		082C488C25501466000E6BC7 /* CameraFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFilter.swift; sourceTree = "<group>"; };
 		082C488E2550147A000E6BC7 /* CameraSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSession.swift; sourceTree = "<group>"; };
 		082C489125501605000E6BC7 /* SignalingMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingMessage.swift; sourceTree = "<group>"; };
+		0836C460255CD42000C67DFC /* ShowDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDialog.swift; sourceTree = "<group>"; };
+		0836C462255CE4FF00C67DFC /* CHATViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHATViewController.swift; sourceTree = "<group>"; };
 		08393CDB255C423F006B2FF3 /* ListUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsersViewController.swift; sourceTree = "<group>"; };
 		08393CDF255C4252006B2FF3 /* listUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = listUser.storyboard; sourceTree = "<group>"; };
 		08393CE3255C429A006B2FF3 /* ListUsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsersModel.swift; sourceTree = "<group>"; };
@@ -171,8 +169,6 @@
 		08B4F1D0255BCDDE00339C0A /* SaveDataDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDataDefaults.swift; sourceTree = "<group>"; };
 		08B4F1D4255BD8E700339C0A /* tabbarcontrollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabbarcontrollerViewController.swift; sourceTree = "<group>"; };
 		08B4F1D8255BDC2E00339C0A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
-		08B4F1E1255BDDCC00339C0A /* LoginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
-		08B4F1E2255BDDCC00339C0A /* LoginCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginCell.xib; sourceTree = "<group>"; };
 		08B4F1EA255BE6C100339C0A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		08F89B6E254BEF400089782B /* DialogHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogHelper.swift; sourceTree = "<group>"; };
 		08F89B72254BF3170089782B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -234,7 +230,6 @@
 			isa = PBXGroup;
 			children = (
 				08393CE7255C43F7006B2FF3 /* ListUserCell */,
-				08B4F1E0255BDDB400339C0A /* LoginCell */,
 				080C5C862545846900F4627B /* TopRegisterCell */,
 				080C5C7525457EE600F4627B /* TextFieldAndLabelCell.swift */,
 				080C5C7625457EE600F4627B /* TextFieldAndLabelCell.xib */,
@@ -414,17 +409,9 @@
 				082C487C254FEBB0000E6BC7 /* VideoCall */,
 				080C5C7D2545800800F4627B /* RegisterScreen */,
 				0876A358253C948200D968E5 /* HomeViewController.swift */,
+				0836C462255CE4FF00C67DFC /* CHATViewController.swift */,
 			);
 			path = Screen;
-			sourceTree = "<group>";
-		};
-		08B4F1E0255BDDB400339C0A /* LoginCell */ = {
-			isa = PBXGroup;
-			children = (
-				08B4F1E1255BDDCC00339C0A /* LoginCell.swift */,
-				08B4F1E2255BDDCC00339C0A /* LoginCell.xib */,
-			);
-			path = LoginCell;
 			sourceTree = "<group>";
 		};
 		08B4F1E9255BE6AF00339C0A /* LoginScreen */ = {
@@ -443,6 +430,7 @@
 				08F89B72254BF3170089782B /* Constant.swift */,
 				08F89B84254BF5E50089782B /* UIColorExtension.swift */,
 				08B4F1D0255BCDDE00339C0A /* SaveDataDefaults.swift */,
+				0836C460255CD42000C67DFC /* ShowDialog.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -587,7 +575,6 @@
 			files = (
 				08263CB725385963003996D4 /* LaunchScreen.storyboard in Resources */,
 				08263CB425385963003996D4 /* Assets.xcassets in Resources */,
-				08B4F1E6255BDDCC00339C0A /* LoginCell.xib in Resources */,
 				08263CB225385962003996D4 /* Main.storyboard in Resources */,
 				08393CED255C4412006B2FF3 /* ListUserCell.xib in Resources */,
 				080C5C8C2545848600F4627B /* TopRegisterCell.xib in Resources */,
@@ -606,7 +593,6 @@
 				080C5C952545864000F4627B /* CustomButtonCell.xib in Resources */,
 				080C5C7B25457EE600F4627B /* TextFieldAndLabelCell.xib in Resources */,
 				08393CEE255C4412006B2FF3 /* ListUserCell.xib in Resources */,
-				08B4F1E7255BDDCC00339C0A /* LoginCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,7 +605,6 @@
 				080C5C962545864000F4627B /* CustomButtonCell.xib in Resources */,
 				080C5C7C25457EE600F4627B /* TextFieldAndLabelCell.xib in Resources */,
 				08393CEF255C4412006B2FF3 /* ListUserCell.xib in Resources */,
-				08B4F1E8255BDDCC00339C0A /* LoginCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,6 +748,7 @@
 				08263CDB25385AFC003996D4 /* LoginViewController.swift in Sources */,
 				082C4884254FECAC000E6BC7 /* RTCClient.swift in Sources */,
 				084572DA25525E01008C5D4F /* package-lock.json in Sources */,
+				0836C463255CE4FF00C67DFC /* CHATViewController.swift in Sources */,
 				080C5C892545848600F4627B /* TopRegisterCell.swift in Sources */,
 				08B4F1D9255BDC2E00339C0A /* R.generated.swift in Sources */,
 				08B4F1D1255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */,
@@ -770,9 +756,9 @@
 				082C4886254FF888000E6BC7 /* RTCSimulatorVideoDecoderFactory.swift in Sources */,
 				082C489225501605000E6BC7 /* SignalingMessage.swift in Sources */,
 				082C488F2550147A000E6BC7 /* CameraSession.swift in Sources */,
+				0836C461255CD42000C67DFC /* ShowDialog.swift in Sources */,
 				08B4F1EB255BE6C100339C0A /* LoginViewModel.swift in Sources */,
 				08393CE4255C429A006B2FF3 /* ListUsersModel.swift in Sources */,
-				08B4F1E3255BDDCC00339C0A /* LoginCell.swift in Sources */,
 				082C488D25501466000E6BC7 /* CameraFilter.swift in Sources */,
 				084572D825525DBE008C5D4F /* package.json in Sources */,
 				080C5C7F2545802300F4627B /* RegisterViewModel.swift in Sources */,
@@ -810,7 +796,6 @@
 				08B4F1D2255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */,
 				08B4F1DA255BDC2E00339C0A /* R.generated.swift in Sources */,
 				080C5C8A2545848600F4627B /* TopRegisterCell.swift in Sources */,
-				08B4F1E4255BDDCC00339C0A /* LoginCell.swift in Sources */,
 				08F89B7E254BF46D0089782B /* AuthRepository.swift in Sources */,
 				08F89B79254BF3EE0089782B /* ApiService.swift in Sources */,
 				08B4F1D6255BD8E700339C0A /* tabbarcontrollerViewController.swift in Sources */,
@@ -838,7 +823,6 @@
 				08B4F1D3255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */,
 				08B4F1DB255BDC2E00339C0A /* R.generated.swift in Sources */,
 				080C5C8B2545848600F4627B /* TopRegisterCell.swift in Sources */,
-				08B4F1E5255BDDCC00339C0A /* LoginCell.swift in Sources */,
 				08F89B7F254BF46D0089782B /* AuthRepository.swift in Sources */,
 				08F89B7A254BF3EE0089782B /* ApiService.swift in Sources */,
 				08B4F1D7255BD8E700339C0A /* tabbarcontrollerViewController.swift in Sources */,

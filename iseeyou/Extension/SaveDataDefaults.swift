@@ -11,12 +11,12 @@ import UIKit
 class SaveDataDefaults {
     let defaults = UserDefaults.standard
 
-    func setIsNeedLogin(isNeedLogin: Bool) {
-        defaults.set(isNeedLogin, forKey: "isNeedLogin")
+    func setgetIsLogin(isNeedLogin: Bool) {
+        defaults.set(isNeedLogin, forKey: "IsLogin")
     }
 
-    func getIsNeedLogin() -> Bool {
-        return defaults.bool(forKey: "isNeedLogin")
+    func getIsLogin() -> Bool {
+        return defaults.bool(forKey: "IsLogin")
     }
 
     func setToken(token: String) {

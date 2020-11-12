@@ -28,7 +28,7 @@ class DialogHelper {
         let alert = UIAlertController(title: title ?? "", message: msg, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {
             _ in
-            print("handle")
+            UIApplication.getTopViewController()?.LoadingStop()
         }))
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             UIApplication.getTopViewController()?.present(alert, animated: true, completion: nil)
