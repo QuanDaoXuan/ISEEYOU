@@ -15,15 +15,16 @@ class ListUsersModel {
 }
 
 class User {
-    var id = ""
+    var idUsers = ""
     var username = ""
     var token = ""
     var image = ""
 
     init(json: JSON) {
-        id = json["id"].stringValue
-        username = json["username"].stringValue
-        token = json["token"].stringValue
-        image = json["image"].stringValue
+        idUsers = json["user"]["idUsers"].stringValue
+        username = json["user"]["username"].stringValue
+        token = json["user"]["idUsers"].stringValue
     }
+
+    init() {}
 }

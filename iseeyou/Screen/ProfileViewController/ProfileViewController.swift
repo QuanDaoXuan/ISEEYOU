@@ -13,7 +13,7 @@ import UIKit
 class ProfileViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
 
-    var viewModel = LoginViewModel()
+    var viewModel = ProfileViewModel()
     var loginReposytory = AuthRepository()
     var disposbag = DisposeBag()
     override func viewDidLoad() {
@@ -38,6 +38,7 @@ class ProfileViewController: UIViewController {
                 case 0:
                     let indexPath = IndexPath(row: index, section: 0)
                     let cell = self.tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.topProfileCell, for: indexPath)!
+                    cell.setupProfile(user: self.viewModel.user)
                     cell.selectionStyle = .none
                     return cell
                 case 1:
@@ -47,6 +48,7 @@ class ProfileViewController: UIViewController {
                     cell.contentView.rx.tapGesture().when(.recognized).subscribe(onNext: {
                         _ in
                         SaveDataDefaults().setgetIsLogin(IsLogin: false)
+                        SaveDataDefaults().setToken(token: "")
                         let vc = R.storyboard.main.loginscreen()!
                         self.navigationController?.setViewControllers([vc], animated: true)
                         self.removeFromParent()
@@ -66,6 +68,6 @@ class ProfileViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-//        setInitScreen()
+        viewModel.authMe(viewController: self)
     }
 }

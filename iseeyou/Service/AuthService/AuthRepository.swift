@@ -14,9 +14,14 @@ import SwiftyJSON
 protocol AuthProtocol {
     func login(username: String, password: String) -> Observable<JSON>
     func register(username: String, password: String, confirmPassword: String) -> Observable<JSON>
+    func auth_me() -> Observable<JSON>
 }
 
 struct AuthRepository: AuthProtocol {
+    func auth_me() -> Observable<JSON> {
+        return AuthService.auth_me.request()
+    }
+
     func login(username: String, password: String) -> Observable<JSON> {
         return AuthService.login(username: username, password: password).request()
     }

@@ -7,4 +7,30 @@
 //
 
 import Foundation
-class ProfileViewModel {}
+import RxCocoa
+import RxSwift
+class ProfileViewModel {
+    var authRepository = AuthRepository()
+    var user = User()
+    var disposeBag = DisposeBag()
+    var datasource = BehaviorRelay<[Int]>(value: [0, 1, 2, 4, 5])
+    init() {
+//        authMe()
+    }
+
+    func authMe(viewController: UIViewController) {
+//        viewController.LoadingStart()
+        authRepository.auth_me().subscribe(onNext: {
+            json in
+            self.user = User(json: json)
+            self.datasource.accept(self.datasource.value)
+//            viewController.LoadingStop()
+        }, onError: {
+            error in
+            print(error)
+            self.user = User()
+            self.datasource.accept(self.datasource.value)
+//            viewController.LoadingStop()
+        }).disposed(by: disposeBag)
+    }
+}

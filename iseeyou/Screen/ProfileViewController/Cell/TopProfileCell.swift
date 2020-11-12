@@ -12,8 +12,8 @@ class TopProfileCell: UITableViewCell {
     @IBOutlet var profileImageView: UIImageView!
     @IBOutlet var coverImageView: UIImageView!
     @IBOutlet var nameLb: UILabel!
-    @IBOutlet weak var coverImageHeight: NSLayoutConstraint!
-    
+    @IBOutlet var coverImageHeight: NSLayoutConstraint!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setupInitView()
@@ -30,5 +30,9 @@ class TopProfileCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+
+    func setupProfile(user: User) {
+        nameLb.text = user.username
     }
 }

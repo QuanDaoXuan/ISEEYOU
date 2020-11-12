@@ -14,6 +14,7 @@ import SwiftyJSON
 enum AuthService {
     case login(username: String, password: String)
     case register(username: String, password: String, confirmPassword: String)
+    case auth_me
     public func request() -> Observable<JSON> {
         var method: HTTPMethod {
             return .post
@@ -32,6 +33,11 @@ enum AuthService {
                 param["username"] = username
                 param["password"] = password
                 return param
+            case .auth_me:
+                var param: [String: Any] = [:]
+                param["idUsers"] = SaveDataDefaults().getToken()
+
+                return param
             }
 
         }()
@@ -42,6 +48,8 @@ enum AuthService {
                 return "login/"
             case .register:
                 return "register/"
+            case .auth_me:
+                return "auth_me/"
             }
 
         }()

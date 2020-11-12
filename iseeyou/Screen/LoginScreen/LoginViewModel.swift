@@ -24,8 +24,10 @@ class LoginViewModel {
             DialogHelper.shared.showPopup(title: "Cảnh Báo", msg: "username và password không được để trống.")
         } else {
             self.loginReposytory.login(username: self.usermame, password: self.password).subscribe(onNext: {
-                _ in
+                json in
                 SaveDataDefaults().setgetIsLogin(IsLogin: true)
+                let userID = json["user"]["idUsers"].stringValue
+                SaveDataDefaults().setToken(token: userID)
                 let vc = R.storyboard.main.tabbarcontrollerViewController()!
                 viewController.navigationController?.pushViewController(vc, animated: true)
                 viewController.removeFromParent()

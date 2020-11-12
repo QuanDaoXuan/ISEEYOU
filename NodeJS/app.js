@@ -12,12 +12,6 @@ var mysql = require("mysql");
 
 app.set("view engine", "ejs");
 
-app.get("/auth_me", function (req, res) {
-  res.json({
-    quan: 123,
-  });
-});
-
 // CREATE USER 'me'@'localhost' IDENTIFIED BY 'Aa12345678@'
 // CREATE TABLE Users (
 //   id int,
@@ -52,6 +46,7 @@ app.post("/login", jsonParse, function (req, res) {
           res.json(
             {
               message: "đăng nhập thành công !!",
+              user: rows[0],
             },
             200
           );
@@ -118,6 +113,78 @@ app.post("/register", jsonParse, function (req, res) {
         }
       }
     });
+  });
+});
+
+app.post("/auth_me", jsonParse, function (req, res) {
+  console.log("req.body.idUsers");
+  var connection = mysql.createConnection({
+    host: localhost,
+    user: user,
+    password: password,
+    database: database,
+  });
+  console.log("req.body.idUsers", req.body.idUsers);
+  var sqlString = `SELECT * FROM Users WHERE idUsers = ${req.body.idUsers}`;
+  console.log(sqlString);
+  connection.connect(function (err) {
+    if (err) throw err;
+    if (req.body.idUsers == "") {
+      res.status(400).send({ error: "idUser is undefined" });
+      console.log("idUser is undefined");
+    } else {
+      connection.query(sqlString, function (error, rows) {
+        if (error) {
+          console.log("error when query: ", error);
+        } else {
+          if (rows.length == 1) {
+            console.log(rows);
+            res.json(
+              {
+                user: rows[0],
+              },
+              200
+            );
+          } else {
+            res.status(400).send({ error: "Bad Request" });
+            console.log("400 bad reqest");
+          }
+        }
+      });
+    }
+    connection.end();
+  });
+});
+
+app.post("/get_list_users", jsonParse, function (req, res) {
+  console.log("req.body.idUsers");
+  var connection = mysql.createConnection({
+    host: localhost,
+    user: user,
+    password: password,
+    database: database,
+  });
+  console.log("req.body.idUsers", req.body.idUsers);
+  var sqlString = `SELECT * FROM Users`;
+  console.log(sqlString);
+  connection.connect(function (err) {
+    if (err) throw err;
+
+    connection.query(sqlString, function (error, rows) {
+      if (error) {
+        console.log("error when query: ", error);
+        res.status(405).send({ error: "server Errror" });
+      } else {
+        res.json(
+          {
+            users: rows,
+          },
+          200
+        );
+      }
+    });
+
+    connection.end();
   });
 });
 
