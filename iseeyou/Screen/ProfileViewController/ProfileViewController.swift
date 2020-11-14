@@ -20,7 +20,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         setupTableView()
-        setInitScreen()
         viewModel.authMe(viewController: self)
     }
 
@@ -46,13 +45,14 @@ class ProfileViewController: UIViewController {
                     let indexPath = IndexPath(row: index, section: 0)
                     let cell = self.tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.labelWithArrowCel, for: indexPath)!
                     cell.selectionStyle = .none
-                    cell.contentView.rx.tapGesture().when(.recognized).subscribe(onNext: {
+                    cell.contentView.rx.tapGesture().when(.recognized).subscribe(onNext: { [unowned self]
                         _ in
                         SaveDataDefaults().setgetIsLogin(IsLogin: false)
                         SaveDataDefaults().setToken(token: "")
                         let vc = R.storyboard.main.loginscreen()!
-                        self.navigationController?.setViewControllers([vc], animated: true)
-                        self.removeFromParent()
+//                        self.navigationController?.popToViewController(vc, animated: true)
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: Constant.needStartCameraSession), object: nil)
+
                     }).disposed(by: cell.disposeBag)
                     return cell
                 default:
@@ -62,10 +62,8 @@ class ProfileViewController: UIViewController {
         }.disposed(by: disposbag)
     }
 
-    func setInitScreen() {
-        navigationController?.title = "You"
-        navigationItem.title = "You"
-        title = "Your title"
+    deinit {
+        print("denit profile")
     }
 
     override func viewWillAppear(_ animated: Bool) {}

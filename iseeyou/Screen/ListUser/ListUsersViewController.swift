@@ -35,7 +35,7 @@ class ListUsersViewController: UITableViewController {
             let indexPath = IndexPath(row: index, section: 0)
             let cell = self.tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.listUserCell, for: indexPath)!
             cell.setupCell(user: value)
-            cell.contentView.rx.tapGesture().when(.recognized).subscribe(onNext: {
+            cell.contentView.rx.tapGesture().when(.recognized).subscribe(onNext: { [unowned self]
                 _ in
                 let vc = R.storyboard.prepare.prepareForCallViewController()!
                 let model = PrepareForCallModel(user: value)
@@ -50,8 +50,8 @@ class ListUsersViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {}
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = R.storyboard.prepare.prepareForCallViewController()!
-        navigationController?.pushViewController(vc, animated: true)
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let vc = R.storyboard.prepare.prepareForCallViewController()!
+//        navigationController?.pushViewController(vc, animated: true)
+//    }
 }

@@ -44,13 +44,18 @@ class PrepareForCallViewController: UIViewController {
                     let indexPath = IndexPath(row: index, section: 0)
                     let cell = self.tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.customButtonCallCell, for: indexPath)!
                     cell.selectionStyle = .none
-//                    cell.contentView.rx.tapGesture().when(.recognized).subscribe(onNext: {
-//                        _ in
-//                        SaveDataDefaults().setgetIsLogin(IsLogin: false)
-//                        let vc = R.storyboard.main.loginscreen()!
-//                        self.navigationController?.setViewControllers([vc], animated: true)
-//                        self.removeFromParent()
-//                        }).disposed(by: cell.disposeBag)
+                    print("123")
+                    cell.videoCallBtn.rx.tapGesture().when(.recognized).subscribe(onNext: {
+                        _ in
+                        print("123")
+                        let vc = R.storyboard.main.videoCallViewController()!
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }).disposed(by: cell.disposeBag)
+                    cell.contentView.rx.tapGesture().when(.recognized).subscribe(onNext: {
+                        _ in
+                        print("123")
+                    }).disposed(by: cell.disposeBag)
+
                     return cell
                 default:
                     let cell = UITableViewCell()

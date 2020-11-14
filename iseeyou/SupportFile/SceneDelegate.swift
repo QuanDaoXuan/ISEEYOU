@@ -10,22 +10,32 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
+    let notificationCenter = NotificationCenter.default
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        notificationCenter.addObserver(self, selector: #selector(setRootViewController), name: NSNotification.Name(rawValue: Constant.needStartCameraSession), object: nil)
         let window = UIWindow(windowScene: windowScene)
         if !SaveDataDefaults().getIsLogin() {
-            let vc = R.storyboard.main.loginscreen()!
-            let navi = UINavigationController(rootViewController: vc)
-            window.rootViewController = navi
+            let vc = R.storyboard.main.loginNavigation()!
+            window.rootViewController = vc
         } else {
             let vc = R.storyboard.main.tabbarcontrollerViewController()!
-            let navi = UINavigationController(rootViewController: vc)
-            navi.title = "123"
-            window.rootViewController = navi
+            window.rootViewController = vc
         }
         self.window = window
         window.makeKeyAndVisible()
+    }
+
+    @objc func setRootViewController() {
+        if !SaveDataDefaults().getIsLogin() {
+            let vc = R.storyboard.main.loginNavigation()!
+            window?.rootViewController = vc
+        } else {
+            let vc = R.storyboard.main.tabbarcontrollerViewController()!
+            window?.rootViewController = vc
+        }
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
