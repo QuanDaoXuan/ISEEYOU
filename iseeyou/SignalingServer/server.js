@@ -6,27 +6,36 @@ let port = 8080;
 let wsServer = new WebSocketServer({ port: port });
 const ip = require('ip');
 console.log('websocket server start.' + ' ipaddress = ' + ip.address() + ' port = ' + port);
+var sockets = {}
 
-wsServer.on('connection', function (ws) {
-    console.log('-- websocket connected --');
+wsServer.on('connection', function (ws, request) {
+    console.log("connection", request.url)
+    if (request.url && request.url != "") {
+        let id = request.url.substring(1, request.url.length)
+        sockets[id] = ws
 
-    ws.on('message', function (message) {
-        console.log('-- message recieved --');
-        const json = JSON.parse(message.toString());
+        ws.on('message', function (message) {
+            const json = JSON.parse(message.toString());
+            let friendId = json["sessionDescription"]["friendId"]
 
-        wsServer.clients.forEach(function each(client) {
-            if (isSame(ws, client)) {
-                console.log('skip sender');
+            if (friendId && friendId !== "") {
+                let socketFriend = sockets[friendId]
+                if (socketFriend) {
+                    json["sessionDescription"]["friendId"] = id
+                    socketFriend.send(JSON.stringify(json))
+                    console.log(friendId, "to ", id)
+                }
             }
-            else {
-                client.send(message);
-            }
+            // Object.keys(sockets).forEach(function (key) {
+            //     if (sockets[key] == ws) {
+            //         // console.log("keep sender")
+            //     } else {
+            //         sockets[key].send(message)
+            //         console.log(friendId)
+            //     }
+            // });
         });
-    });
 
+    }
 });
 
-function isSame(ws1, ws2) {
-    // -- compare object --
-    return (ws1 === ws2);
-}
