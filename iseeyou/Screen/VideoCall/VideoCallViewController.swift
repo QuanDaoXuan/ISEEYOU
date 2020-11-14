@@ -11,6 +11,7 @@ import UIKit
 import WebRTC
 
 class VideoCallViewController: UIViewController, WebSocketDelegate, RTCClientDelegate, CameraSessionDelegate {
+    var userId = ""
     enum messageType {
         case greet
         case introduce
@@ -40,7 +41,7 @@ class VideoCallViewController: UIViewController, WebSocketDelegate, RTCClientDel
     
     // MARK: Change this ip address in your case
     
-    let ipAddress: String = "10.118.0.49"
+    let ipAddress: String = "10.118.0.56"
     let wsStatusMessageBase = "WebSocket: "
     let webRTCStatusMesasgeBase = "WebRTC: "
     let likeStr: String = "Like"
@@ -75,7 +76,7 @@ class VideoCallViewController: UIViewController, WebSocketDelegate, RTCClientDel
             cameraFilter = CameraFilter()
         }
         
-        socket = WebSocket(url: URL(string: "ws://" + ipAddress + ":8080/")!)
+        socket = WebSocket(url: URL(string: "ws://" + ipAddress + ":8080")!)
         socket.delegate = self
         
         tryToConnectWebSocket = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { _ in
@@ -182,6 +183,23 @@ class VideoCallViewController: UIViewController, WebSocketDelegate, RTCClientDel
         view.addSubview(hangupButton)
     }
     
+    deinit {
+        print("denit ViewController")
+    }
+    
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        if webRTCClient.isConnected {
+//            webRTCClient.disconnect()
+//        }
+//        if socket.isConnected {
+//            socket.disconnect()
+//        }
+//        if tryToConnectWebSocket.isValid {
+//            tryToConnectWebSocket.invalidate()
+//        }
+//    }
+    
     // MARK: - UI Events
     
     @objc func callButtonTapped(_ sender: UIButton) {
@@ -251,6 +269,7 @@ class VideoCallViewController: UIViewController, WebSocketDelegate, RTCClientDel
             
             if socket.isConnected {
                 socket.write(string: message)
+                print("sendSDP write")
             }
         } catch {
             print(error)
@@ -266,6 +285,7 @@ class VideoCallViewController: UIViewController, WebSocketDelegate, RTCClientDel
             
             if socket.isConnected {
                 socket.write(string: message)
+                print("candidate write")
             }
         } catch {
             print(error)
@@ -336,6 +356,8 @@ extension VideoCallViewController {
         case .failed:
             state = "failed"
         case .new:
+            state = "new..."
+        @unknown default:
             state = "new..."
         }
         webRTCStatusLabel.text = webRTCStatusMesasgeBase + state

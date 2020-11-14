@@ -30,7 +30,7 @@ class LoginViewModel {
                 SaveDataDefaults().setToken(token: userID)
                 let vc = R.storyboard.main.tabbarcontrollerViewController()!
                 viewController.navigationController?.pushViewController(vc, animated: true)
-                viewController.removeFromParent()
+//                UIWindow().rootViewController = vc
                 viewController.LoadingStop()
             }, onError: {
                 _ in
