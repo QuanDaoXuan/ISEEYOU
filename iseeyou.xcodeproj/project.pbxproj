@@ -64,9 +64,9 @@
 		0836C485255CF61900C67DFC /* CustomButtonCallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0836C481255CF61900C67DFC /* CustomButtonCallCell.xib */; };
 		0836C486255CF61900C67DFC /* CustomButtonCallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0836C481255CF61900C67DFC /* CustomButtonCallCell.xib */; };
 		0836C487255CF61900C67DFC /* CustomButtonCallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0836C481255CF61900C67DFC /* CustomButtonCallCell.xib */; };
-		08393CDC255C423F006B2FF3 /* ListUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08393CDB255C423F006B2FF3 /* ListUsersViewController.swift */; };
-		08393CDD255C423F006B2FF3 /* ListUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08393CDB255C423F006B2FF3 /* ListUsersViewController.swift */; };
-		08393CDE255C423F006B2FF3 /* ListUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08393CDB255C423F006B2FF3 /* ListUsersViewController.swift */; };
+		08393CDC255C423F006B2FF3 /* UsersAndSetupCallVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08393CDB255C423F006B2FF3 /* UsersAndSetupCallVideoVC.swift */; };
+		08393CDD255C423F006B2FF3 /* UsersAndSetupCallVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08393CDB255C423F006B2FF3 /* UsersAndSetupCallVideoVC.swift */; };
+		08393CDE255C423F006B2FF3 /* UsersAndSetupCallVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08393CDB255C423F006B2FF3 /* UsersAndSetupCallVideoVC.swift */; };
 		08393CE0255C4253006B2FF3 /* listUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08393CDF255C4252006B2FF3 /* listUser.storyboard */; };
 		08393CE1255C4253006B2FF3 /* listUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08393CDF255C4252006B2FF3 /* listUser.storyboard */; };
 		08393CE2255C4253006B2FF3 /* listUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08393CDF255C4252006B2FF3 /* listUser.storyboard */; };
@@ -82,6 +82,7 @@
 		084572D625525DA1008C5D4F /* server.js in Sources */ = {isa = PBXBuildFile; fileRef = 084572D525525DA1008C5D4F /* server.js */; };
 		084572D825525DBE008C5D4F /* package.json in Sources */ = {isa = PBXBuildFile; fileRef = 084572D725525DBE008C5D4F /* package.json */; };
 		084572DA25525E01008C5D4F /* package-lock.json in Sources */ = {isa = PBXBuildFile; fileRef = 084572D925525E01008C5D4F /* package-lock.json */; };
+		087247D2256239B800974817 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087247D1256239B800974817 /* User.swift */; };
 		087F987113AD9188B8F2933C /* Pods_iseeyou_iseeyouUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01572196F1B7EADC0D9450D6 /* Pods_iseeyou_iseeyouUITests.framework */; };
 		08B4F1D1255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D0255BCDDE00339C0A /* SaveDataDefaults.swift */; };
 		08B4F1D2255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D0255BCDDE00339C0A /* SaveDataDefaults.swift */; };
@@ -175,7 +176,7 @@
 		0836C47C255CF5AE00C67DFC /* prepare.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = prepare.storyboard; sourceTree = "<group>"; };
 		0836C480255CF61900C67DFC /* CustomButtonCallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonCallCell.swift; sourceTree = "<group>"; };
 		0836C481255CF61900C67DFC /* CustomButtonCallCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButtonCallCell.xib; sourceTree = "<group>"; };
-		08393CDB255C423F006B2FF3 /* ListUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsersViewController.swift; sourceTree = "<group>"; };
+		08393CDB255C423F006B2FF3 /* UsersAndSetupCallVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAndSetupCallVideoVC.swift; sourceTree = "<group>"; };
 		08393CDF255C4252006B2FF3 /* listUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = listUser.storyboard; sourceTree = "<group>"; };
 		08393CE3255C429A006B2FF3 /* ListUsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsersModel.swift; sourceTree = "<group>"; };
 		08393CE8255C4412006B2FF3 /* ListUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserCell.swift; sourceTree = "<group>"; };
@@ -183,6 +184,7 @@
 		084572D525525DA1008C5D4F /* server.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = server.js; sourceTree = "<group>"; };
 		084572D725525DBE008C5D4F /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
 		084572D925525E01008C5D4F /* package-lock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "package-lock.json"; sourceTree = "<group>"; };
+		087247D1256239B800974817 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		08B4F1D0255BCDDE00339C0A /* SaveDataDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDataDefaults.swift; sourceTree = "<group>"; };
 		08B4F1D8255BDC2E00339C0A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		08B4F1EA255BE6C100339C0A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -298,9 +300,8 @@
 		08263CA925385962003996D4 /* iseeyou */ = {
 			isa = PBXGroup;
 			children = (
-				084572DB25525F04008C5D4F /* ApiServer */,
 				084572D425525D7A008C5D4F /* SignalingServer */,
-				082C4890255015EA000E6BC7 /* Data */,
+				082C4890255015EA000E6BC7 /* Model */,
 				082C488B25501443000E6BC7 /* Camera */,
 				082C4882254FEC87000E6BC7 /* WebRTC */,
 				08F89B76254BF3E50089782B /* Service */,
@@ -371,12 +372,13 @@
 			path = Camera;
 			sourceTree = "<group>";
 		};
-		082C4890255015EA000E6BC7 /* Data */ = {
+		082C4890255015EA000E6BC7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				082C489125501605000E6BC7 /* SignalingMessage.swift */,
+				087247D1256239B800974817 /* User.swift */,
 			);
-			path = Data;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		0836C464255CE65400C67DFC /* ProfileViewController */ = {
@@ -423,7 +425,7 @@
 		08393CDA255C41D3006B2FF3 /* ListUser */ = {
 			isa = PBXGroup;
 			children = (
-				08393CDB255C423F006B2FF3 /* ListUsersViewController.swift */,
+				08393CDB255C423F006B2FF3 /* UsersAndSetupCallVideoVC.swift */,
 				08393CDF255C4252006B2FF3 /* listUser.storyboard */,
 				08393CE3255C429A006B2FF3 /* ListUsersModel.swift */,
 			);
@@ -447,13 +449,6 @@
 				084572D925525E01008C5D4F /* package-lock.json */,
 			);
 			path = SignalingServer;
-			sourceTree = "<group>";
-		};
-		084572DB25525F04008C5D4F /* ApiServer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ApiServer;
 			sourceTree = "<group>";
 		};
 		0876A356253C945200D968E5 /* Screen */ = {
@@ -803,7 +798,7 @@
 				082C488A2550035B000E6BC7 /* RTCCustomFrameCapturer.swift in Sources */,
 				08F89B73254BF3170089782B /* Constant.swift in Sources */,
 				080C5C7725457EE600F4627B /* TextFieldAndLabelCell.swift in Sources */,
-				08393CDC255C423F006B2FF3 /* ListUsersViewController.swift in Sources */,
+				08393CDC255C423F006B2FF3 /* UsersAndSetupCallVideoVC.swift in Sources */,
 				0836C47B255CF57600C67DFC /* ProfileViewModel.swift in Sources */,
 				0836C466255CE8D100C67DFC /* ProfileViewController.swift in Sources */,
 				082C4888254FF89A000E6BC7 /* RTCSimluatorVideoEncoderFactory.swift in Sources */,
@@ -826,6 +821,7 @@
 				080C5C7F2545802300F4627B /* RegisterViewModel.swift in Sources */,
 				0836C46A255CE95800C67DFC /* TopProfileCell.swift in Sources */,
 				080C5C912545864000F4627B /* CustomButtonCell.swift in Sources */,
+				087247D2256239B800974817 /* User.swift in Sources */,
 				08F89B78254BF3EE0089782B /* ApiService.swift in Sources */,
 				08F89B85254BF5E50089782B /* UIColorExtension.swift in Sources */,
 				0836C474255CF4BA00C67DFC /* PrepareForCallModel.swift in Sources */,
@@ -853,7 +849,7 @@
 				080C5C922545864000F4627B /* CustomButtonCell.swift in Sources */,
 				08393CEB255C4412006B2FF3 /* ListUserCell.swift in Sources */,
 				08393CE5255C429A006B2FF3 /* ListUsersModel.swift in Sources */,
-				08393CDD255C423F006B2FF3 /* ListUsersViewController.swift in Sources */,
+				08393CDD255C423F006B2FF3 /* UsersAndSetupCallVideoVC.swift in Sources */,
 				08F89B74254BF3170089782B /* Constant.swift in Sources */,
 				08F89B82254BF4920089782B /* AuthService.swift in Sources */,
 				08B4F1EC255BE6C100339C0A /* LoginViewModel.swift in Sources */,
@@ -879,7 +875,7 @@
 				080C5C932545864000F4627B /* CustomButtonCell.swift in Sources */,
 				08393CEC255C4412006B2FF3 /* ListUserCell.swift in Sources */,
 				08393CE6255C429A006B2FF3 /* ListUsersModel.swift in Sources */,
-				08393CDE255C423F006B2FF3 /* ListUsersViewController.swift in Sources */,
+				08393CDE255C423F006B2FF3 /* UsersAndSetupCallVideoVC.swift in Sources */,
 				08F89B75254BF3170089782B /* Constant.swift in Sources */,
 				08F89B83254BF4920089782B /* AuthService.swift in Sources */,
 				08B4F1ED255BE6C100339C0A /* LoginViewModel.swift in Sources */,

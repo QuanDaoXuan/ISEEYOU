@@ -13,7 +13,7 @@ import Starscream
 import UIKit
 import WebRTC
 
-class ListUsersViewController: UITableViewController, WebSocketDelegate, RTCClientDelegate, CameraSessionDelegate {
+class UsersAndSetupCallVideoVC: UITableViewController, WebSocketDelegate, RTCClientDelegate, CameraSessionDelegate {
     // MARK: - Properties
     
     var userId = ""
@@ -153,7 +153,7 @@ class ListUsersViewController: UITableViewController, WebSocketDelegate, RTCClie
     }
 }
 
-extension ListUsersViewController {
+extension UsersAndSetupCallVideoVC {
     func websocketDidConnect(socket: WebSocketClient) {
         print("-- websocket did connect --")
         // set Green Lb and connected in text
@@ -191,7 +191,7 @@ extension ListUsersViewController {
 
 // MARK: - WebRTCClient Delegate
 
-extension ListUsersViewController {
+extension UsersAndSetupCallVideoVC {
     func didGenerateCandidate(iceCandidate: RTCIceCandidate) {
         sendCandidate(iceCandidate: iceCandidate)
     }
@@ -238,7 +238,7 @@ extension ListUsersViewController {
 
 // MARK: - CameraSessionDelegate
 
-extension ListUsersViewController {
+extension UsersAndSetupCallVideoVC {
     func didOutput(_ sampleBuffer: CMSampleBuffer) {
         if useCustomCapturer {
             webRTCClient.captureCurrentFrame(sampleBuffer: sampleBuffer)
