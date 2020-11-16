@@ -30,25 +30,34 @@ class TextFieldAndLabelCell: UITableViewCell {
         textField.placeholder = placeHoder ?? ""
     }
 
-    func bindTextField(viewModel: RegisterViewModel, type: Int) {
+    func bindTextField(viewModel: RegisterViewModel, type: RegisterType) {
         switch type {
-        case 1:
+        case .userName:
             textField.rx.text.bind { value in
-                print(viewModel.usermame)
-                viewModel.usermame = value ?? ""
-                print(viewModel.usermame)
+
+                viewModel.user.username = value ?? ""
             }.disposed(by: disposeBag)
-        case 2:
+        case .password:
             textField.rx.text.bind { value in
-                viewModel.password = value ?? ""
-                print(viewModel.password)
+                viewModel.user.password = value ?? ""
+
             }.disposed(by: disposeBag)
-        case 3:
+        case .name:
             textField.rx.text.bind { value in
-                viewModel.confirmPassword = value ?? ""
+                viewModel.user.name = value ?? ""
             }.disposed(by: disposeBag)
-        default:
-            break
+        case .address:
+            textField.rx.text.bind { value in
+                viewModel.user.address = value ?? ""
+            }.disposed(by: disposeBag)
+        case .phoneNumber:
+            textField.rx.text.bind { value in
+                viewModel.user.sdt = value ?? ""
+            }.disposed(by: disposeBag)
+        case .imageLink:
+            textField.rx.text.bind { value in
+                viewModel.user.imageLink = value ?? ""
+            }.disposed(by: disposeBag)
         }
     }
 

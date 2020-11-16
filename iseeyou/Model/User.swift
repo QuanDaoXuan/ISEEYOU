@@ -12,8 +12,12 @@ import SwiftyJSON
 class User {
     var idUsers = ""
     var username = ""
+    var password = ""
+    var name = ""
+    var sdt = ""
     var token = ""
-    var image = ""
+    var imageLink = ""
+    var address = ""
 
     init(json: JSON) {
         idUsers = json["user"]["idUsers"].stringValue
