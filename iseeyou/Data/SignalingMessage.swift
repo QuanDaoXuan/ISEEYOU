@@ -16,6 +16,7 @@ struct SignalingMessage: Codable {
 
 struct SDP: Codable {
     let sdp: String
+    var friendId = ""
 }
 
 struct Candidate: Codable {

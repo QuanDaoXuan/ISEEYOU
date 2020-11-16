@@ -10,22 +10,22 @@ var sockets = {}
 
 wsServer.on('connection', function (ws, request) {
     console.log("connection", request.url)
-    if (request.url && request.url != "") {
-        let id = request.url.substring(1, request.url.length)
-        sockets[id] = ws
+    // if (request.url && request.url != "") {
+    //     let id = request.url.substring(1, request.url.length)
+        // sockets[id] = ws
 
         ws.on('message', function (message) {
             const json = JSON.parse(message.toString());
-            let friendId = json["sessionDescription"]["friendId"]
+            // let friendId = json["sessionDescription"]["friendId"]
 
-            if (friendId && friendId !== "") {
-                let socketFriend = sockets[friendId]
-                if (socketFriend) {
-                    json["sessionDescription"]["friendId"] = id
-                    socketFriend.send(JSON.stringify(json))
-                    console.log(friendId, "to ", id)
-                }
-            }
+            // if (friendId && friendId !== "") {
+            //     let socketFriend = sockets[friendId]
+            //     if (socketFriend) {
+            //         json["sessionDescription"]["friendId"] = id
+            //         socketFriend.send(JSON.stringify(json))
+            //         console.log(friendId, "to ", id)
+            //     }
+            // }
             // Object.keys(sockets).forEach(function (key) {
             //     if (sockets[key] == ws) {
             //         // console.log("keep sender")
@@ -34,8 +34,14 @@ wsServer.on('connection', function (ws, request) {
             //         console.log(friendId)
             //     }
             // });
+            wsServer.clients.forEach(function (client){
+                if (ws != client){
+                    client.send(message)
+                    console.log('send')
+                }
+            })
         });
 
-    }
+    // }
 });
 

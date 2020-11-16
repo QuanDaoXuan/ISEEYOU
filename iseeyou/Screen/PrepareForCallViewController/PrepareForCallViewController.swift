@@ -15,6 +15,7 @@ class PrepareForCallViewController: UIViewController {
     var viewModel: PrepareForCallModel!
     var loginReposytory = AuthRepository()
     var disposbag = DisposeBag()
+    var webRTCClient: RTCClient!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -47,8 +48,9 @@ class PrepareForCallViewController: UIViewController {
                     print("123")
                     cell.videoCallBtn.rx.tapGesture().when(.recognized).subscribe(onNext: {
                         _ in
-                        print("123")
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callvideo"), object: nil)
                         let vc = R.storyboard.main.videoCallViewController()!
+                        vc.webRTCClient = self.webRTCClient
                         self.navigationController?.pushViewController(vc, animated: true)
                     }).disposed(by: cell.disposeBag)
                     cell.contentView.rx.tapGesture().when(.recognized).subscribe(onNext: {

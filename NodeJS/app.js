@@ -147,7 +147,7 @@ app.post("/auth_me", jsonParse, function (req, res) {
             );
           } else {
             res.status(400).send({ error: "Bad Request" });
-            console.log("400 bad reqest");
+            console.log("Bad Request");
           }
         }
       });

@@ -44,11 +44,9 @@
 		082C4886254FF888000E6BC7 /* RTCSimulatorVideoDecoderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C4885254FF888000E6BC7 /* RTCSimulatorVideoDecoderFactory.swift */; };
 		082C4888254FF89A000E6BC7 /* RTCSimluatorVideoEncoderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C4887254FF89A000E6BC7 /* RTCSimluatorVideoEncoderFactory.swift */; };
 		082C488A2550035B000E6BC7 /* RTCCustomFrameCapturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C48892550035B000E6BC7 /* RTCCustomFrameCapturer.swift */; };
-		082C488D25501466000E6BC7 /* CameraFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C488C25501466000E6BC7 /* CameraFilter.swift */; };
 		082C488F2550147A000E6BC7 /* CameraSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C488E2550147A000E6BC7 /* CameraSession.swift */; };
 		082C489225501605000E6BC7 /* SignalingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C489125501605000E6BC7 /* SignalingMessage.swift */; };
 		0836C461255CD42000C67DFC /* ShowDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C460255CD42000C67DFC /* ShowDialog.swift */; };
-		0836C463255CE4FF00C67DFC /* CHATViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C462255CE4FF00C67DFC /* CHATViewController.swift */; };
 		0836C466255CE8D100C67DFC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C465255CE8D100C67DFC /* ProfileViewController.swift */; };
 		0836C46A255CE95800C67DFC /* TopProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C468255CE95800C67DFC /* TopProfileCell.swift */; };
 		0836C46B255CE95800C67DFC /* TopProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0836C469255CE95800C67DFC /* TopProfileCell.xib */; };
@@ -84,16 +82,10 @@
 		084572D625525DA1008C5D4F /* server.js in Sources */ = {isa = PBXBuildFile; fileRef = 084572D525525DA1008C5D4F /* server.js */; };
 		084572D825525DBE008C5D4F /* package.json in Sources */ = {isa = PBXBuildFile; fileRef = 084572D725525DBE008C5D4F /* package.json */; };
 		084572DA25525E01008C5D4F /* package-lock.json in Sources */ = {isa = PBXBuildFile; fileRef = 084572D925525E01008C5D4F /* package-lock.json */; };
-		0876A359253C948200D968E5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876A358253C948200D968E5 /* HomeViewController.swift */; };
-		0876A35A253C948200D968E5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876A358253C948200D968E5 /* HomeViewController.swift */; };
-		0876A35B253C948200D968E5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876A358253C948200D968E5 /* HomeViewController.swift */; };
 		087F987113AD9188B8F2933C /* Pods_iseeyou_iseeyouUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01572196F1B7EADC0D9450D6 /* Pods_iseeyou_iseeyouUITests.framework */; };
 		08B4F1D1255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D0255BCDDE00339C0A /* SaveDataDefaults.swift */; };
 		08B4F1D2255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D0255BCDDE00339C0A /* SaveDataDefaults.swift */; };
 		08B4F1D3255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D0255BCDDE00339C0A /* SaveDataDefaults.swift */; };
-		08B4F1D5255BD8E700339C0A /* tabbarcontrollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D4255BD8E700339C0A /* tabbarcontrollerViewController.swift */; };
-		08B4F1D6255BD8E700339C0A /* tabbarcontrollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D4255BD8E700339C0A /* tabbarcontrollerViewController.swift */; };
-		08B4F1D7255BD8E700339C0A /* tabbarcontrollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D4255BD8E700339C0A /* tabbarcontrollerViewController.swift */; };
 		08B4F1D9255BDC2E00339C0A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D8255BDC2E00339C0A /* R.generated.swift */; };
 		08B4F1DA255BDC2E00339C0A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D8255BDC2E00339C0A /* R.generated.swift */; };
 		08B4F1DB255BDC2E00339C0A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4F1D8255BDC2E00339C0A /* R.generated.swift */; };
@@ -169,11 +161,9 @@
 		082C4885254FF888000E6BC7 /* RTCSimulatorVideoDecoderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCSimulatorVideoDecoderFactory.swift; sourceTree = "<group>"; };
 		082C4887254FF89A000E6BC7 /* RTCSimluatorVideoEncoderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCSimluatorVideoEncoderFactory.swift; sourceTree = "<group>"; };
 		082C48892550035B000E6BC7 /* RTCCustomFrameCapturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCCustomFrameCapturer.swift; sourceTree = "<group>"; };
-		082C488C25501466000E6BC7 /* CameraFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFilter.swift; sourceTree = "<group>"; };
 		082C488E2550147A000E6BC7 /* CameraSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSession.swift; sourceTree = "<group>"; };
 		082C489125501605000E6BC7 /* SignalingMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingMessage.swift; sourceTree = "<group>"; };
 		0836C460255CD42000C67DFC /* ShowDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDialog.swift; sourceTree = "<group>"; };
-		0836C462255CE4FF00C67DFC /* CHATViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHATViewController.swift; sourceTree = "<group>"; };
 		0836C465255CE8D100C67DFC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0836C468255CE95800C67DFC /* TopProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopProfileCell.swift; sourceTree = "<group>"; };
 		0836C469255CE95800C67DFC /* TopProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopProfileCell.xib; sourceTree = "<group>"; };
@@ -193,9 +183,7 @@
 		084572D525525DA1008C5D4F /* server.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = server.js; sourceTree = "<group>"; };
 		084572D725525DBE008C5D4F /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
 		084572D925525E01008C5D4F /* package-lock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "package-lock.json"; sourceTree = "<group>"; };
-		0876A358253C948200D968E5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		08B4F1D0255BCDDE00339C0A /* SaveDataDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDataDefaults.swift; sourceTree = "<group>"; };
-		08B4F1D4255BD8E700339C0A /* tabbarcontrollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabbarcontrollerViewController.swift; sourceTree = "<group>"; };
 		08B4F1D8255BDC2E00339C0A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		08B4F1EA255BE6C100339C0A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		08F89B6E254BEF400089782B /* DialogHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogHelper.swift; sourceTree = "<group>"; };
@@ -272,7 +260,6 @@
 			children = (
 				08263CAE25385962003996D4 /* RegisterViewcontroller.swift */,
 				080C5C7E2545802300F4627B /* RegisterViewModel.swift */,
-				08B4F1D4255BD8E700339C0A /* tabbarcontrollerViewController.swift */,
 			);
 			path = RegisterScreen;
 			sourceTree = "<group>";
@@ -379,7 +366,6 @@
 		082C488B25501443000E6BC7 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
-				082C488C25501466000E6BC7 /* CameraFilter.swift */,
 				082C488E2550147A000E6BC7 /* CameraSession.swift */,
 			);
 			path = Camera;
@@ -473,14 +459,12 @@
 		0876A356253C945200D968E5 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				082C487C254FEBB0000E6BC7 /* VideoCall */,
 				0836C470255CF45100C67DFC /* PrepareForCallViewController */,
 				0836C464255CE65400C67DFC /* ProfileViewController */,
 				08393CDA255C41D3006B2FF3 /* ListUser */,
 				08B4F1E9255BE6AF00339C0A /* LoginScreen */,
-				082C487C254FEBB0000E6BC7 /* VideoCall */,
 				080C5C7D2545800800F4627B /* RegisterScreen */,
-				0876A358253C948200D968E5 /* HomeViewController.swift */,
-				0836C462255CE4FF00C67DFC /* CHATViewController.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -817,10 +801,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				082C488A2550035B000E6BC7 /* RTCCustomFrameCapturer.swift in Sources */,
-				0876A359253C948200D968E5 /* HomeViewController.swift in Sources */,
 				08F89B73254BF3170089782B /* Constant.swift in Sources */,
 				080C5C7725457EE600F4627B /* TextFieldAndLabelCell.swift in Sources */,
-				08B4F1D5255BD8E700339C0A /* tabbarcontrollerViewController.swift in Sources */,
 				08393CDC255C423F006B2FF3 /* ListUsersViewController.swift in Sources */,
 				0836C47B255CF57600C67DFC /* ProfileViewModel.swift in Sources */,
 				0836C466255CE8D100C67DFC /* ProfileViewController.swift in Sources */,
@@ -830,7 +812,6 @@
 				082C4884254FECAC000E6BC7 /* RTCClient.swift in Sources */,
 				0836C46E255CEF2B00C67DFC /* LabelWithArrowCel.swift in Sources */,
 				084572DA25525E01008C5D4F /* package-lock.json in Sources */,
-				0836C463255CE4FF00C67DFC /* CHATViewController.swift in Sources */,
 				080C5C892545848600F4627B /* TopRegisterCell.swift in Sources */,
 				08B4F1D9255BDC2E00339C0A /* R.generated.swift in Sources */,
 				08B4F1D1255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */,
@@ -841,7 +822,6 @@
 				0836C461255CD42000C67DFC /* ShowDialog.swift in Sources */,
 				08B4F1EB255BE6C100339C0A /* LoginViewModel.swift in Sources */,
 				08393CE4255C429A006B2FF3 /* ListUsersModel.swift in Sources */,
-				082C488D25501466000E6BC7 /* CameraFilter.swift in Sources */,
 				084572D825525DBE008C5D4F /* package.json in Sources */,
 				080C5C7F2545802300F4627B /* RegisterViewModel.swift in Sources */,
 				0836C46A255CE95800C67DFC /* TopProfileCell.swift in Sources */,
@@ -877,7 +857,6 @@
 				08F89B74254BF3170089782B /* Constant.swift in Sources */,
 				08F89B82254BF4920089782B /* AuthService.swift in Sources */,
 				08B4F1EC255BE6C100339C0A /* LoginViewModel.swift in Sources */,
-				0876A35A253C948200D968E5 /* HomeViewController.swift in Sources */,
 				080C5C802545802300F4627B /* RegisterViewModel.swift in Sources */,
 				08B4F1D2255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */,
 				0836C483255CF61900C67DFC /* CustomButtonCallCell.swift in Sources */,
@@ -885,7 +864,6 @@
 				080C5C8A2545848600F4627B /* TopRegisterCell.swift in Sources */,
 				08F89B7E254BF46D0089782B /* AuthRepository.swift in Sources */,
 				08F89B79254BF3EE0089782B /* ApiService.swift in Sources */,
-				08B4F1D6255BD8E700339C0A /* tabbarcontrollerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -905,7 +883,6 @@
 				08F89B75254BF3170089782B /* Constant.swift in Sources */,
 				08F89B83254BF4920089782B /* AuthService.swift in Sources */,
 				08B4F1ED255BE6C100339C0A /* LoginViewModel.swift in Sources */,
-				0876A35B253C948200D968E5 /* HomeViewController.swift in Sources */,
 				080C5C812545802300F4627B /* RegisterViewModel.swift in Sources */,
 				08B4F1D3255BCDDE00339C0A /* SaveDataDefaults.swift in Sources */,
 				0836C484255CF61900C67DFC /* CustomButtonCallCell.swift in Sources */,
@@ -913,7 +890,6 @@
 				080C5C8B2545848600F4627B /* TopRegisterCell.swift in Sources */,
 				08F89B7F254BF46D0089782B /* AuthRepository.swift in Sources */,
 				08F89B7A254BF3EE0089782B /* ApiService.swift in Sources */,
-				08B4F1D7255BD8E700339C0A /* tabbarcontrollerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1073,14 +1049,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CL9324PRQA;
+				DEVELOPMENT_TEAM = JH4AQFNHPZ;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = iseeyou/SupportFile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fsa.iseeyou11;
+				PRODUCT_BUNDLE_IDENTIFIER = fsa.iseeyou111;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1095,14 +1071,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CL9324PRQA;
+				DEVELOPMENT_TEAM = JH4AQFNHPZ;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = iseeyou/SupportFile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fsa.iseeyou11;
+				PRODUCT_BUNDLE_IDENTIFIER = fsa.iseeyou111;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
