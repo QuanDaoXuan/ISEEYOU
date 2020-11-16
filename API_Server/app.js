@@ -9,6 +9,7 @@ var port = 3000;
 var jsonParse = bodyParser.json();
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var mysql = require("mysql");
+const { delay } = require("lodash");
 
 app.set("view engine", "ejs");
 
@@ -184,6 +185,97 @@ app.get("/get_list_users", jsonParse, function (req, res) {
 
     connection.end();
   });
+});
+
+app.get("/fetchCard", jsonParse, function (req, res) {
+  // delay(2);
+  setTimeout(function () {
+    res.json({
+      items: [
+        {
+          id: 4,
+          name: "",
+          company_name: "company23422_name",
+          created_at: "2020-11-11T09:02:53.000000Z",
+          image_url: null,
+          card_user_id: 5,
+          displayed_started_at: "2020/11/11",
+        },
+        {
+          id: 4,
+          name: "",
+          company_name: "company23422_name",
+          created_at: "2020-11-11T09:02:53.000000Z",
+          image_url: null,
+          card_user_id: 5,
+          displayed_started_at: "2020/11/11",
+        },
+        {
+          id: 4,
+          name: "",
+          company_name: "company23422_name",
+          created_at: "2020-11-11T09:02:53.000000Z",
+          image_url: null,
+          card_user_id: 5,
+          displayed_started_at: "2020/11/11",
+        },
+        {
+          id: 4,
+          name: "",
+          company_name: "company23422_name",
+          created_at: "2020-11-11T09:02:53.000000Z",
+          image_url: null,
+          card_user_id: 5,
+          displayed_started_at: "2020/11/11",
+        },
+        {
+          id: 4,
+          name: "",
+          company_name: "company23422_name",
+          created_at: "2020-11-11T09:02:53.000000Z",
+          image_url: null,
+          card_user_id: 5,
+          displayed_started_at: "2020/11/11",
+        },
+        {
+          id: 4,
+          name: "",
+          company_name: "company23422_name",
+          created_at: "2020-11-11T09:02:53.000000Z",
+          image_url: null,
+          card_user_id: 5,
+          displayed_started_at: "2020/11/11",
+        },
+        {
+          id: 4,
+          name: "",
+          company_name: "company23422_name",
+          created_at: "2020-11-11T09:02:53.000000Z",
+          image_url: null,
+          card_user_id: 5,
+          displayed_started_at: "2020/11/11",
+        },
+        {
+          id: 4,
+          name: "",
+          company_name: "company23422_name",
+          created_at: "2020-11-11T09:02:53.000000Z",
+          image_url: null,
+          card_user_id: 5,
+          displayed_started_at: "2020/11/11",
+        },
+      ],
+      pagination: {
+        page: 1,
+        limit: 50,
+        sort_by: "created_at",
+        sort_type: "desc",
+        number: 0,
+        total: 0,
+        last_id: 0,
+      },
+    });
+  }, 2000);
 });
 
 app.listen(port, function () {
