@@ -14,6 +14,7 @@ class TopProfileCell: UITableViewCell {
     @IBOutlet var nameLb: UILabel!
     @IBOutlet var coverImageHeight: NSLayoutConstraint!
     @IBOutlet var addressLb: UILabel!
+    @IBOutlet var phoneNumber: UILabel!
 
     @IBOutlet var idLb: UILabel!
     override func awakeFromNib() {
@@ -35,15 +36,17 @@ class TopProfileCell: UITableViewCell {
     }
 
     func setupProfile(user: User) {
-        nameLb.text = user.username
+        nameLb.text = user.name
         idLb.text = "id: " + user.idUsers
-
-        if Int.random(in: 1 ... 190) % 2 == 0 {
+        addressLb.text = user.address
+        idLb.text = user.idUsers
+        phoneNumber.text = user.sdt
+        
+        if user.imageLink == "" {
             profileImageView.image = R.image.image_default_2()!
-            profileImageView.layer.borderWidth = 1
-            profileImageView.layer.borderColor = UIColor.gray.cgColor
         } else {
-            profileImageView.image = R.image.avatar1()!
+            let url = URL(string: user.imageLink)
+            profileImageView.kf.setImage(with: url)
         }
     }
 }

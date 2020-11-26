@@ -76,8 +76,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="escape" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XbB-vX-Jn6">
-                        <rect key="frame" x="20" y="431.5" width="35" height="24"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XbB-vX-Jn6">
+                        <rect key="frame" x="20" y="432.5" width="35" height="22.5"/>
                         <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="35" id="YGU-Vb-3Oa"/>
@@ -132,14 +132,15 @@
                 <outlet property="coverImageView" destination="IT6-V3-chO" id="6bN-rv-qvc"/>
                 <outlet property="idLb" destination="pXv-ic-zIN" id="Wi5-Zq-tGL"/>
                 <outlet property="nameLb" destination="QUH-Dd-O8k" id="3K5-C1-LnZ"/>
+                <outlet property="phoneNumber" destination="RG2-wF-lmq" id="Xs9-Lx-HmK"/>
                 <outlet property="profileImageView" destination="1cK-bt-3To" id="vRS-le-zg9"/>
             </connections>
             <point key="canvasLocation" x="-181.8840579710145" y="291.96428571428572"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="escape" catalog="system" width="128" height="121"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
     </resources>
 </document>

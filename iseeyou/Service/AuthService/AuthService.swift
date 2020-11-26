@@ -42,6 +42,7 @@ enum AuthService {
                 param["address"] = user.address
                 param["name"] = user.name
                 param["imageLink"] = user.imageLink
+                param["sdt"] = user.sdt
                 return param
             case .auth_me:
                 var param: [String: Any] = [:]

@@ -45,17 +45,28 @@ class PrepareForCallViewController: UIViewController {
                     let indexPath = IndexPath(row: index, section: 0)
                     let cell = self.tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.customButtonCallCell, for: indexPath)!
                     cell.selectionStyle = .none
+                    if self.viewModel.user.username == SaveDataDefaults().getUserName() {
+                        cell.videoCallBtn.layer.opacity = 0.5
+                        cell.videoCallBtn.backgroundColor = UIColor.gray
+                    }
                     print("123")
                     cell.videoCallBtn.rx.tapGesture().when(.recognized).subscribe(onNext: {
                         _ in
-                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callvideo"), object: nil)
-                        let vc = R.storyboard.main.videoCallViewController()!
-                        vc.webRTCClient = self.webRTCClient
-                        self.navigationController?.pushViewController(vc, animated: true)
+                        if self.viewModel.user.username != SaveDataDefaults().getUserName() {
+                            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callvideo"), object: nil)
+                            let vc = R.storyboard.main.videoCallViewController()!
+                            vc.webRTCClient = self.webRTCClient
+                            self.navigationController?.pushViewController(vc, animated: true)
+                        }
                     }).disposed(by: cell.disposeBag)
                     cell.contentView.rx.tapGesture().when(.recognized).subscribe(onNext: {
                         _ in
                         print("123")
+                    }).disposed(by: cell.disposeBag)
+                    cell.audioCallBtn.rx.tapGesture().when(.recognized).subscribe(onNext: {
+                        _ in
+                        guard let number = URL(string: "tel://" + self.viewModel.user.sdt) else { return }
+                        UIApplication.shared.open(number)
                     }).disposed(by: cell.disposeBag)
 
                     return cell

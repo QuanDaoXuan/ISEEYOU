@@ -44,6 +44,7 @@ class LoginViewController: UIViewController {
                     let indexPath = IndexPath(row: index, section: 0)
                     let cell = self.tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.textFieldAndLabelCell, for: indexPath)!
                     cell.setupCell(title: "Nhập user name", placeHoder: "enter your user name")
+                    cell.textField.text = SaveDataDefaults().getUserName()
                     cell.bindTextField(viewModel: self.viewModel, type: 1)
                     cell.selectionStyle = .none
                     return cell
@@ -51,7 +52,9 @@ class LoginViewController: UIViewController {
                     let indexPath = IndexPath(row: index, section: 0)
                     let cell = self.tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.textFieldAndLabelCell, for: indexPath)!
                     cell.setupCell(title: "Nhập password", placeHoder: "enter your password")
+                    cell.textField.text = SaveDataDefaults().getPassword()
                     cell.bindTextField(viewModel: self.viewModel, type: 2)
+                    cell.textField.isSecureTextEntry = true
                     cell.selectionStyle = .none
                     return cell
 

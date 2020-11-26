@@ -16,14 +16,6 @@ import UIKit
 class DialogHelper {
     static let shared = DialogHelper()
 
-    func showAlertInValidBarCode(okAction: @escaping (UIAlertAction) -> Void) {
-        let alert = UIAlertController(title: Constant.INVALID_BARCODE_FORMAT_TITLE, message: Constant.INVALID_BARCODE_FORMAT_CONTENT, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: Constant.INVALID_BARCODE_FORMAT_BUTTON, style: .default, handler: okAction))
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            UIApplication.getTopViewController()?.present(alert, animated: true, completion: nil)
-        }
-    }
-
     func showPopup(title: String?, msg: String) {
         let alert = UIAlertController(title: title ?? "", message: msg, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {

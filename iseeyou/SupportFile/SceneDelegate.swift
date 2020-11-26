@@ -28,14 +28,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     @objc func setRootViewController() {
+        window?.rootViewController?.navigationController?.popToRootViewController(animated: true)
         if !SaveDataDefaults().getIsLogin() {
-            let vc = R.storyboard.main.loginNavigation()!
-            window?.rootViewController = vc
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                let vc = R.storyboard.main.loginNavigation()!
+                self.window?.rootViewController = vc
+                self.window?.makeKeyAndVisible()
+                self.window?.rootViewController?.parent?.navigationController?.popToRootViewController(animated: true)
+            }
         } else {
-            let vc = R.storyboard.main.tabbarcontrollerViewController()!
-            window?.rootViewController = vc
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.window?.rootViewController?.navigationController?.viewControllers = []
+                let vc = R.storyboard.main.tabbarcontrollerViewController()!
+                self.window?.rootViewController = vc
+                self.window?.makeKeyAndVisible()
+                self.window?.rootViewController?.parent?.navigationController?.popToRootViewController(animated: true)
+            }
         }
-        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

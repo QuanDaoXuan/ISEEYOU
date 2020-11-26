@@ -25,6 +25,7 @@ class RegisterViewModel {
                 DialogHelper.shared.showPopup(title: "", msg: "Đăng ký thành công.!")
             }, onError: {
                 _ in
+                print("123")
                 DialogHelper.shared.showPopup(title: "", msg: "Có lỗi xảy ra khi đăng ký, vui lòng kiểm tra lại.")
             }).disposed(by: disposbag)
         }

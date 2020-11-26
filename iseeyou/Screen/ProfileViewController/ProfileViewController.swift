@@ -49,8 +49,7 @@ class ProfileViewController: UIViewController {
                         _ in
                         SaveDataDefaults().setgetIsLogin(IsLogin: false)
                         SaveDataDefaults().setToken(token: "")
-                        let vc = R.storyboard.main.loginscreen()!
-//                        self.navigationController?.popToViewController(vc, animated: true)
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "disconnectSocket"), object: nil)
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue: Constant.needStartCameraSession), object: nil)
 
                     }).disposed(by: cell.disposeBag)

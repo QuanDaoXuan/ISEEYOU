@@ -6,6 +6,7 @@
 //  Copyright © 2020 truc. All rights reserved.
 //
 
+import Kingfisher
 import RxSwift
 import UIKit
 class ListUserCell: UITableViewCell {
@@ -32,13 +33,12 @@ class ListUserCell: UITableViewCell {
 
     func setupCell(user: User) {
         titleLb.text = user.username
-
-        if Int.random(in: 1 ... 190) % 2 == 0 {
+        noteLb.text = user.address
+        if user.imageLink == "" {
             avatarView.image = R.image.image_default_2()!
-            avatarView.layer.borderWidth = 1
-            avatarView.layer.borderColor = UIColor.gray.cgColor
         } else {
-            avatarView.image = R.image.avatar1()!
+            let url = URL(string: user.imageLink)
+            avatarView.kf.setImage(with: url)
         }
     }
 }

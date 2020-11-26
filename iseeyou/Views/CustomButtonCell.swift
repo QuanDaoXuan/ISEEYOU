@@ -21,6 +21,7 @@ class CustomButtonCell: UITableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
+        disposeBag = DisposeBag()
         marginBottom.constant = 10
         marginTop.constant = 0
     }

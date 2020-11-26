@@ -12,11 +12,11 @@ struct SignalingMessage: Codable {
     let type: String
     let sessionDescription: SDP?
     let candidate: Candidate?
+    var friendId: String
 }
 
 struct SDP: Codable {
     let sdp: String
-    var friendId = ""
 }
 
 struct Candidate: Codable {

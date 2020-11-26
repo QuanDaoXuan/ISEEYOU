@@ -19,18 +19,15 @@ class ProfileViewModel {
     }
 
     func authMe(viewController: UIViewController) {
-//        viewController.LoadingStart()
         authRepository.auth_me().subscribe(onNext: {
             json in
             self.user = User(json: json)
             self.datasource.accept(self.datasource.value)
-//            viewController.LoadingStop()
         }, onError: {
             error in
             print(error)
             self.user = User()
             self.datasource.accept(self.datasource.value)
-//            viewController.LoadingStop()
         }).disposed(by: disposeBag)
     }
 }

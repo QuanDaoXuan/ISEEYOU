@@ -26,4 +26,20 @@ class SaveDataDefaults {
     func getToken() -> String {
         return defaults.string(forKey: "tokenId") ?? ""
     }
+    
+    func setUsername(user: String) {
+        defaults.set(user, forKey: "setUsername")
+    }
+
+    func getUserName() -> String {
+        return defaults.string(forKey: "setUsername") ?? ""
+    }
+    
+    func setPassword(password: String) {
+        defaults.set(password, forKey: "setPassword")
+    }
+
+    func getPassword() -> String {
+        return defaults.string(forKey: "setPassword") ?? ""
+    }
 }

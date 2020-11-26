@@ -59,6 +59,7 @@ class RegisterViewcontroller: UIViewController {
                     let cell = self.tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.textFieldAndLabelCell, for: indexPath)!
                     cell.setupCell(title: "Nhập password ", placeHoder: "enter your password")
                     cell.bindTextField(viewModel: self.viewModel, type: .password)
+                    cell.textField.isSecureTextEntry = true
                     cell.selectionStyle = .none
                     return cell
                 case 3:

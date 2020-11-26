@@ -30,8 +30,9 @@ class LoginViewModel {
                 SaveDataDefaults().setToken(token: userID)
                 let vc = R.storyboard.main.tabbarcontrollerViewController()!
                 viewController.navigationController?.pushViewController(vc, animated: true)
-//                UIWindow().rootViewController = vc
                 viewController.LoadingStop()
+                SaveDataDefaults().setUsername(user: self.usermame)
+                SaveDataDefaults().setPassword(password: self.password)
             }, onError: {
                 _ in
                 DialogHelper.shared.showPopup(title: "", msg: "Có lỗi xảy ra khi đăng nhập, vui lòng kiểm tra lại.")

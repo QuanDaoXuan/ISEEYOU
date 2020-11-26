@@ -16,7 +16,7 @@ import WebRTC
 class UsersAndSetupCallVideoVC: UITableViewController, WebSocketDelegate, RTCClientDelegate, CameraSessionDelegate {
     // MARK: - Properties
     
-    var userId = ""
+    var friendId = ""
     let viewModel = ListUsersModel()
     var disposeBag = DisposeBag()
     let notificationCenter = NotificationCenter.default
@@ -30,7 +30,7 @@ class UsersAndSetupCallVideoVC: UITableViewController, WebSocketDelegate, RTCCli
     
     // MARK: Change this ip address
     
-    let ipAddress: String = "172.31.38.148"
+    let ipAddress: String = "10.112.0.46"
     
     func setupVideoCall() {
         #if targetEnvironment(simulator)
@@ -50,17 +50,27 @@ class UsersAndSetupCallVideoVC: UITableViewController, WebSocketDelegate, RTCCli
             cameraSession?.setupSession()
         }
         
-        socket = WebSocket(url: URL(string: "ws://" + ipAddress + ":8080")!)
-        socket.delegate = self
-        
         tryToConnectWebSocket = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { _ in
-            if self.webRTCClient.isConnected || self.socket.isConnected {
+            
+            if self.viewModel.user.idUsers != "" && self.socket == nil {
+                self.socket = WebSocket(url: URL(string: "ws://" + self.ipAddress + ":8080/" + self.viewModel.user.idUsers)!)
+                self.socket.delegate = self
+            }
+            if self.socket == nil {
                 return
             }
             
+            if self.webRTCClient.isConnected || self.socket.isConnected {
+                return
+            }
             self.socket.connect()
+            
 //            print("connected socket")
         })
+    }
+    
+    deinit {
+        print("denit call viewcontroller")
     }
     
     @objc func callButtonTapped(_ sender: UIButton) {
@@ -80,7 +90,7 @@ class UsersAndSetupCallVideoVC: UITableViewController, WebSocketDelegate, RTCCli
         }
         
         let sdp = SDP(sdp: sessionDescription.sdp)
-        let signalingMessage = SignalingMessage(type: type, sessionDescription: sdp, candidate: nil)
+        let signalingMessage = SignalingMessage(type: type, sessionDescription: sdp, candidate: nil, friendId: friendId)
         do {
             let data = try JSONEncoder().encode(signalingMessage)
             let message = String(data: data, encoding: String.Encoding.utf8)!
@@ -96,7 +106,7 @@ class UsersAndSetupCallVideoVC: UITableViewController, WebSocketDelegate, RTCCli
     
     private func sendCandidate(iceCandidate: RTCIceCandidate) {
         let candidate = Candidate(sdp: iceCandidate.sdp, sdpMLineIndex: iceCandidate.sdpMLineIndex, sdpMid: iceCandidate.sdpMid!)
-        let signalingMessage = SignalingMessage(type: "candidate", sessionDescription: nil, candidate: candidate)
+        let signalingMessage = SignalingMessage(type: "candidate", sessionDescription: nil, candidate: candidate, friendId: friendId)
         do {
             let data = try JSONEncoder().encode(signalingMessage)
             let message = String(data: data, encoding: String.Encoding.utf8)!
@@ -116,10 +126,17 @@ class UsersAndSetupCallVideoVC: UITableViewController, WebSocketDelegate, RTCCli
         viewModel.getListUsers()
         setupVideoCall()
         notificationCenter.addObserver(self, selector: #selector(callButtonTapped(_:)), name: NSNotification.Name(rawValue: "callvideo"), object: nil)
+        notificationCenter.addObserver(self, selector: #selector(disconnectSocket), name: NSNotification.Name(rawValue: "disconnectSocket"), object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    @objc func disconnectSocket() {
+        socket.disconnect()
+        tryToConnectWebSocket.invalidate()
+        webRTCClient.disconnect()
     }
     
     func setupTableView() {
@@ -144,6 +161,7 @@ class UsersAndSetupCallVideoVC: UITableViewController, WebSocketDelegate, RTCCli
                 let model = PrepareForCallModel(user: value)
                 vc.viewModel = model
                 vc.webRTCClient = self.webRTCClient
+                self.friendId = value.idUsers
                 self.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: cell.disposeBag)
             cell.selectionStyle = .none
@@ -167,6 +185,7 @@ extension UsersAndSetupCallVideoVC {
         do {
             let signalingMessage = try JSONDecoder().decode(SignalingMessage.self, from: text.data(using: .utf8)!)
             if signalingMessage.type == "offer" {
+                friendId = signalingMessage.friendId
                 let vc = R.storyboard.main.videoCallViewController()!
                 vc.webRTCClient = webRTCClient
                 navigationController?.pushViewController(vc, animated: true)
