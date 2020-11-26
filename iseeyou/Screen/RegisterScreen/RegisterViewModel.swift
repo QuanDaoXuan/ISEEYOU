@@ -11,28 +11,22 @@ import RxCocoa
 import RxSwift
 
 class RegisterViewModel {
-    var datasource = BehaviorRelay<[Int]>(value: [0, 1, 2, 3, 4, 5])
-    var usermame = ""
-    var password = ""
-    var confirmPassword = ""
+    var datasource = BehaviorRelay<[Int]>(value: [0, 1, 2, 3, 4, 5, 6, 7, 9])
+    var user = User()
     var disposbag = DisposeBag()
     var registerRepository = AuthRepository()
 
-    func setupRegister(username: String, password: String, confirmPassword: String) {
-        if usermame == "" || password == "" {
+    func setupRegister(user: User) {
+        if user.username == "" || user.password == "" {
             DialogHelper.shared.showPopup(title: "Cảnh Báo", msg: "username và password không được để trống.")
         } else {
-            if self.password != confirmPassword {
-                DialogHelper.shared.showPopup(title: "", msg: "Password and confirm password does not match")
-            } else {
-                registerRepository.register(username: username, password: password, confirmPassword: confirmPassword).subscribe(onNext: {
-                    _ in
-                    DialogHelper.shared.showPopup(title: "", msg: "Đăng ký thành công.!")
-                }, onError: {
-                    _ in
-                    DialogHelper.shared.showPopup(title: "", msg: "Có lỗi xảy ra khi đăng ký, vui lòng kiểm tra lại.")
-             }).disposed(by: disposbag)
-            }
+            registerRepository.register(user: self.user).subscribe(onNext: {
+                _ in
+                DialogHelper.shared.showPopup(title: "", msg: "Đăng ký thành công.!")
+            }, onError: {
+                _ in
+                DialogHelper.shared.showPopup(title: "", msg: "Có lỗi xảy ra khi đăng ký, vui lòng kiểm tra lại.")
+            }).disposed(by: disposbag)
         }
     }
 }

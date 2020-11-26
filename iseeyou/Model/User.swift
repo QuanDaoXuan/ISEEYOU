@@ -13,18 +13,30 @@ class User {
     var idUsers = ""
     var username = ""
     var token = ""
-    var image = ""
+    var password = ""
+    var name = ""
+    var sdt = ""
+    var imageLink = ""
+    var address = ""
 
     init(json: JSON) {
         idUsers = json["user"]["idUsers"].stringValue
         username = json["user"]["username"].stringValue
         token = json["user"]["idUsers"].stringValue
+        name = json["user"]["name"].stringValue
+        sdt = json["user"]["sdt"].stringValue
+        imageLink = json["user"]["imageLink"].stringValue
+        address = json["user"]["address"].stringValue
     }
 
     init(listUser: JSON) {
         idUsers = listUser["idUsers"].stringValue
         username = listUser["username"].stringValue
         token = listUser["idUsers"].stringValue
+        name = listUser["name"].stringValue
+        sdt = listUser["sdt"].stringValue
+        imageLink = listUser"imageLink"].stringValue
+        address = listUser["address"].stringValue
     }
 
     func getListUser(json: [JSON]) -> [User] {
