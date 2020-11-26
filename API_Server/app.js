@@ -87,7 +87,7 @@ app.post("/register", jsonParse, function (req, res) {
               message: "Vui lòng điền đầy đủ username và password",
             });
           } else {
-            var sqlInsertString = `INSERT INTO Users (username,password) VALUES ('${req.body.username}', '${req.body.password}')`;
+            var sqlInsertString = `INSERT INTO Users (username,password,token,name,sdt,imageLink,address) VALUES ('${req.body.username}', '${req.body.password}','${req.body.token}','${req.body.name}','${req.body.sdt}','${req.body.imageLink}','${req.body.address}')`;
             console.log(sqlInsertString);
             connection.query(sqlInsertString, function (error, rows) {
               if (error) {
@@ -157,7 +157,7 @@ app.post("/auth_me", jsonParse, function (req, res) {
   });
 });
 
-app.get("/get_list_users", jsonParse, function (req, res) {
+app.get("/get_list_users/", jsonParse, function (req, res) {
   var connection = mysql.createConnection({
     host: localhost,
     user: user,

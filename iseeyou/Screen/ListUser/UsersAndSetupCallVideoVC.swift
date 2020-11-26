@@ -30,7 +30,7 @@ class UsersAndSetupCallVideoVC: UITableViewController, WebSocketDelegate, RTCCli
     
     // MARK: Change this ip address
     
-    let ipAddress: String = "192.168.31.100"
+    let ipAddress: String = "172.31.38.148"
     
     func setupVideoCall() {
         #if targetEnvironment(simulator)
@@ -59,7 +59,7 @@ class UsersAndSetupCallVideoVC: UITableViewController, WebSocketDelegate, RTCCli
             }
             
             self.socket.connect()
-            print("connected socket")
+//            print("connected socket")
         })
     }
     

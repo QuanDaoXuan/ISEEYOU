@@ -35,7 +35,7 @@ class User {
         token = listUser["idUsers"].stringValue
         name = listUser["name"].stringValue
         sdt = listUser["sdt"].stringValue
-        imageLink = listUser"imageLink"].stringValue
+        imageLink = listUser["imageLink"].stringValue
         address = listUser["address"].stringValue
     }
 

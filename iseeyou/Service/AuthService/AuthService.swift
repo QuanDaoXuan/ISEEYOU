@@ -20,7 +20,7 @@ enum AuthService {
         var method: HTTPMethod {
             switch self {
             case .get_list_users:
-                return .post
+                return .get
             default:
                 return .post
             }
